@@ -22,7 +22,6 @@ class SolverWrapper(object):
     This wrapper gives us control over he snapshotting process, which we
     use to unnormalize the learned bounding-box regression weights.
     """
-
     def __init__(self, solver_prototxt, roidb, output_dir,
                  pretrained_model=None):
         """Initialize the SolverWrapper."""

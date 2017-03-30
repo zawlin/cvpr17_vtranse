@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Implementation-Version: 3.6.0
+Built-Date: 2015-12-09
+Created-By: Stanford JavaNLP (jebolton)
+Main-class: edu.stanford.nlp.tagger.maxent.MaxentTaggerGUI
+
