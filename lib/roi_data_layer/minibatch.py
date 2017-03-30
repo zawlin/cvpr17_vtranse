@@ -80,6 +80,7 @@ def get_minibatch(roidb, num_classes):
 
     return blobs
 
+
 def _sample_rois(roidb, fg_rois_per_image, rois_per_image, num_classes):
     """Generate a random sample of RoIs comprising foreground and background
     examples.
@@ -135,6 +136,26 @@ def _get_image_blob(roidb, scale_inds):
     im_scales = []
     for i in xrange(num_images):
         im = cv2.imread(roidb[i]['image'])
+        '''
+
+        arr = [1, 3, 5]
+        jpg = np.arange(30, 100, 7).astype(np.float32)
+        jpg_prob = jpg / jpg.sum()
+        jpg = jpg.astype(np.uint8)
+        gauss_stddev = [10, 30, 50, 90]
+        gauss_p = [.8, .1, .05, .05]
+        k = (np.random.choice(arr, p=[.8, .1, .1]), np.random.choice(arr, p=[.8, .1, .1]))
+        im_p = cv2.blur(im, k).astype(np.float32)
+        gauss = np.zeros(im_p.shape, im_p.dtype)
+        cv2.randn(gauss, (0), (np.random.choice(gauss_stddev, p=gauss_p)))
+        im_p = (im_p + np.random.uniform(-10, 10)) * np.random.uniform(.9, 1.1)
+        im_p = np.clip(im_p + gauss, 0, 255)
+        im_p = im_p.astype(np.uint8)
+        # print  [cv2.IMWRITE_JPEG_QUALITY, np.random.choice(jpg,p=jpg_prob)]
+        flag, ajpg = cv2.imencode(".jpg", im_p, [cv2.IMWRITE_JPEG_QUALITY, int(np.random.choice(jpg, p=jpg_prob))])
+        im_p = cv2.imdecode(ajpg, 1)
+        im=im_p
+        '''
         if roidb[i]['flipped']:
             im = im[:, ::-1, :]
         target_size = cfg.TRAIN.SCALES[scale_inds[i]]

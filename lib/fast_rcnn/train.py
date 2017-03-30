@@ -35,9 +35,21 @@ class SolverWrapper(object):
 
         if cfg.TRAIN.BBOX_REG:
             print 'Computing bounding-box regression targets...'
-            self.bbox_means, self.bbox_stds = \
+
+            cache_file = osp.join(roidb[0]['cache_path'], roidb[0]['db_name'] + '_norm_roidb.pkl')
+            if osp.exists(cache_file):
+                with open(cache_file, 'rb') as fid:
+                    self.bbox_means, self.bbox_stds, roidb = cPickle.load(fid)
+                print '{} norm/ed roidb loaded from {}'.format( roidb[0]['db_name'], cache_file)
+
+            else:
+                self.bbox_means, self.bbox_stds = \
                     rdl_roidb.add_bbox_regression_targets(roidb)
-            print 'done'
+
+                with open(cache_file, 'wb') as fid:
+                    cPickle.dump((self.bbox_means, self.bbox_stds, roidb), fid, cPickle.HIGHEST_PROTOCOL)
+                print 'wrote norm roidb to {}'.format(cache_file)
+                print 'done'
 
         self.solver = caffe.SGDSolver(solver_prototxt)
         if pretrained_model is not None:

@@ -12,6 +12,8 @@ from fast_rcnn.config import cfg
 from fast_rcnn.bbox_transform import bbox_transform
 from utils.cython_bbox import bbox_overlaps
 import PIL
+import os.path as osp
+import cPickle
 
 def prepare_roidb(imdb):
     """Enrich the imdb's roidb by adding some derived quantities that
@@ -20,11 +22,14 @@ def prepare_roidb(imdb):
     each ground-truth box. The class with maximum overlap is also
     recorded.
     """
-    sizes = [PIL.Image.open(imdb.image_path_at(i)).size
-             for i in xrange(imdb.num_images)]
+    #sizes = [PIL.Image.open(imdb.image_path_at(i)).size
+    #             for i in xrange(imdb.num_images)]
+    sizes = imdb._wh
     roidb = imdb.roidb
     for i in xrange(len(imdb.image_index)):
         roidb[i]['image'] = imdb.image_path_at(i)
+        if hasattr(imdb,'_image_id'):
+            roidb[i]['im_idx'] = imdb._image_id[i]
         roidb[i]['width'] = sizes[i][0]
         roidb[i]['height'] = sizes[i][1]
         # need gt_overlaps as a dense array for argmax
@@ -93,12 +98,15 @@ def add_bbox_regression_targets(roidb):
     # Normalize targets
     if cfg.TRAIN.BBOX_NORMALIZE_TARGETS:
         print "Normalizing targets"
-        for im_i in xrange(num_images):
-            targets = roidb[im_i]['bbox_targets']
-            for cls in xrange(1, num_classes):
-                cls_inds = np.where(targets[:, 0] == cls)[0]
-                roidb[im_i]['bbox_targets'][cls_inds, 1:] -= means[cls, :]
-                roidb[im_i]['bbox_targets'][cls_inds, 1:] /= stds[cls, :]
+        # just ignore this since it seems not to be doing anything for rpn
+
+        #cache this shit, why so slow..
+        # for im_i in xrange(num_images):
+            # targets = roidb[im_i]['bbox_targets']
+            # for cls in xrange(1, num_classes):
+                # cls_inds = np.where(targets[:, 0] == cls)[0]
+                # roidb[im_i]['bbox_targets'][cls_inds, 1:] -= means[cls, :]
+                # roidb[im_i]['bbox_targets'][cls_inds, 1:] /= stds[cls, :]
     else:
         print "NOT normalizing targets"
 
