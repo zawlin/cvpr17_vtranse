@@ -3,11 +3,10 @@ This implements "Visual Translation Embedding Network for Visual Relation Detect
 #### What's inside?
 * object detectors training and data preprocessor for vrd and vg.
 * vg canonicalization
-* relation training code for vrd and vg.
+* two-stage relation training code for vrd and vg.
 
 #### Coming soon
-* setup instructions
-* pretrained models
+* todo
 
 #### Setup
 ##### Object Detector
