@@ -1,0 +1,16 @@
+train_net: "models/vg1_2/relation/train_all.prototxt"
+base_lr: 0.01
+lr_policy: "step"
+gamma: 0.1
+stepsize: 35000
+display: 20
+average_loss: 100
+# iter_size: 1
+momentum: 0.9
+weight_decay: 0.0005
+# We disable standard caffe solver snapshotting and implement our own snapshot
+# function
+snapshot: 500
+# We still use the snapshot prefix, though
+snapshot_prefix: "output/relation/vg/relation_vgg16_all"
+iter_size: 2

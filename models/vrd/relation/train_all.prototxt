@@ -1,0 +1,285 @@
+
+name: "RelationModel"
+layer {
+  name: 'input-data'
+  type: 'Python'
+  top: 'classeme_s'
+  top: 'classeme_o'
+  top: 'visual_s'
+  top: 'visual_o'
+  top: 'location_s'
+  top: 'location_o'
+  top: 'label'
+  python_param {
+    module: 'vrd.layer_all'
+    layer: 'RelationDatalayer'
+    param_str: "'batch_size': 100"
+  }
+}
+layer 
+{
+  name: "classeme"
+  type: "Eltwise"
+  bottom: "classeme_s"
+  bottom: "classeme_o"
+  top: "classeme"
+  eltwise_param {
+    operation: SUM
+    coeff: 1
+    coeff: -1
+  }
+}
+
+layer {
+  name: "classeme_fc1"
+  type: "InnerProduct"
+  bottom: "classeme"
+  top: "classeme_fc1"
+  param {
+    lr_mult: 1
+  }
+  param {
+    lr_mult: 2
+  }
+  inner_product_param {
+    num_output: 300
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+
+layer {
+  name: "classeme_fc1_relu"
+  type: "ReLU"
+  bottom: "classeme_fc1"
+  top: "classeme_fc1"
+}
+
+layer {
+  name: "classeme_fc2"
+  type: "InnerProduct"
+  bottom: "classeme_fc1"
+  top: "classeme_fc2"
+  param {
+    lr_mult: 1
+  }
+  param {
+    lr_mult: 2
+  }
+  inner_product_param {
+    num_output: 200
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+
+layer {
+  name: "classeme_fc2_relu"
+  type: "ReLU"
+  bottom: "classeme_fc2"
+  top: "classeme_fc2"
+}
+
+layer 
+{
+  name: "visual"
+  type: "Eltwise"
+  bottom: "visual_s"
+  bottom: "visual_o"
+  top: "visual"
+  eltwise_param {
+    operation: SUM
+    coeff: 1
+    coeff: -1
+  }
+}
+
+layer {
+  name: "visual_fc1"
+  type: "InnerProduct"
+  bottom: "visual"
+  top: "visual_fc1"
+  param {
+    lr_mult: 1
+  }
+  param {
+    lr_mult: 2
+  }
+  inner_product_param {
+    num_output:150
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+
+layer {
+  name: "visual_fc1_relu"
+  type: "ReLU"
+  bottom: "visual_fc1"
+  top: "visual_fc1"
+}
+
+
+layer 
+{
+  name: "location"
+  type: "Eltwise"
+  bottom: "location_s"
+  bottom: "location_o"
+  top: "location"
+  eltwise_param {
+    operation: SUM
+    coeff: 1
+    coeff: -1
+  }
+}
+
+layer {
+  name: "location_fc1"
+  type: "InnerProduct"
+  bottom: "location"
+  top: "location_fc1"
+  param {
+    lr_mult: 1
+  }
+  param {
+    lr_mult: 2
+  }
+  inner_product_param {
+    num_output:20 
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+
+layer {
+  name: "location_fc1_relu"
+  type: "ReLU"
+  bottom: "location_fc1"
+  top: "location_fc1"
+}
+
+layer {
+  name: "location_fc2"
+  type: "InnerProduct"
+  bottom: "location_fc1"
+  top: "location_fc2"
+  param {
+    lr_mult: 1
+  }
+  param {
+    lr_mult: 2
+  }
+  inner_product_param {
+    num_output:10 
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+
+layer {
+  name: "location_fc2_relu"
+  type: "ReLU"
+  bottom: "location_fc2"
+  top: "location_fc2"
+}
+
+layer {
+  name: "classeme_scale"
+  type: "Scale"
+  bottom: "classeme_fc2"
+  top: "classeme_scale"
+  scale_param {
+    filler {
+      value:1.0
+  }
+    bias_term: false
+  }
+}
+
+layer {
+  name: "visual_scale"
+  type: "Scale"
+  bottom: "visual_fc1"
+  top: "visual_scale"
+  scale_param {
+    filler {
+      value:0.3
+  }
+    bias_term: false
+  }
+}
+
+layer {
+  name: "location_scale"
+  type: "Scale"
+  bottom: "location_fc2"
+  top: "location_scale"
+  scale_param {
+    filler {
+      value:1.0
+  }
+    bias_term: false
+  }
+}
+layer {
+  name: "features"
+  bottom: "classeme_scale"
+  bottom: "visual_scale"
+  bottom: "location_scale"
+  top: "features"
+  type: "Concat"
+  concat_param {
+    axis: 1
+  }
+}
+layer {
+  name: "relation"
+  type: "InnerProduct"
+  bottom: "features"
+  top: "relation"
+  param {
+    lr_mult: 1
+  }
+  param {
+    lr_mult: 2
+  }
+  inner_product_param {
+    num_output: 70
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+
+
+layer {
+  name: "loss"
+  type: "SoftmaxWithLoss"
+  bottom: "relation"
+  bottom: "label"
+  top: "loss"
+}
