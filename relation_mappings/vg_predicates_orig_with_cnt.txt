@@ -1,0 +1,1969 @@
+on 695459
+have 278141
+in 235424
+wear 151054
+of 146239
+with 66560
+hold 42829
+behind 40355
+on top of 32271
+near 27104
+next to 25290
+under 18808
+by 16195
+sit on 15533
+above 13942
+in front of 13468
+on side of 11363
+attach to 9919
+at 9644
+over 9249
+for 8921
+rid 8792
+stand on 8149
+around 7813
+beside 7661
+inside 6814
+hang on 6028
+standing in 5896
+carry 5792
+cover 5240
+eat 5137
+walk on 4672
+play 4006
+sit in 3960
+watch 3865
+belong to 3810
+lay on 3793
+along 3548
+below 3399
+between 3391
+look at 3313
+against 3044
+paint on 3041
+from 2876
+park on 2683
+to 2455
+cover in 2268
+say 2247
+mount on 2239
+fly in 1989
+part of 1982
+use 1977
+across 1966
+on back of 1889
+grow on 1846
+cross 1810
+walk in 1762
+fly 1685
+sit at 1659
+contain 1640
+swing 1625
+outside 1608
+wear by 1562
+underneath 1544
+print on 1492
+pull 1445
+hang in 1427
+fill with 1385
+show 1375
+beneath 1370
+support 1361
+cover with 1339
+hit 1321
+in middle of 1278
+touch 1276
+surround 1226
+standing next to 1202
+build into 1163
+lean on 1120
+cast 1103
+throw 1099
+adorn 1082
+lay in 1045
+rest on 1041
+grow in 1029
+write on 983
+drive on 983
+stand behind 962
+connect to 953
+cut 952
+hold by 929
+standing by 916
+catch 902
+walk 897
+read 883
+face 879
+standing 877 #ignored because usually this indicates positional qualifer is merged into object, like 'standing next to pole'
+on bottom of 817
+stand near 813#ignored because reflect in seems more meaningful
+reflect in 794
+talk on 777
+through 764
+float in 757
+lining 751
+hang over 746
+make 729
+front 727
+grazing in 713
+stick out of 713
+lead to 701
+close to 686
+lean against 680
+lie in 667
+to right of 642
+drive 639
+atop 634
+reflect on 633
+drinking 628
+be 563
+standing in front of 559
+beyond 559
+to left of 558
+see 548
+take 539
+look 538
+front of 537
+color 518
+push 516
+dress in 504
+in back of 504
+swimming in 503
+walk with 499
+wear on 489
+surround by 482
+cast on 476
+
+come from 473
+
+hang 465
+tie to 464
+hang above 460
+drive down 455
+shin on 454
+feed 454
+on edge of 449
+come out of 444
+wait for 432
+off 431
+top 431
+at top of 423
+reflect 415
+enjoy 409
+skiing on 405
+wrap around 400
+grazing on 399
+run on 396
+leave 393
+left of 392
+line 391
+surf 386
+down 384
+surfing in 380
+stand in 375
+go down 368
+
+white 366
+stand at 360
+form 357
+do 356
+
+
+stand on top of 351
+
+at end of 350
+stand with 347
+sit next to 346
+sleep on 340
+stick in 338
+overlook 337
+
+stack on 332
+surf on 332
+
+fly over 320
+perch on 317
+out of 314
+
+kick 311
+attach 309
+wrap in 309
+
+hold in 306
+place on 306
+that 304
+hold onto 303
+walk across 300
+located on 299
+stick on 298
+float on 295
+into 293
+at bottom of 292
+park next to 291
+hang off 289
+on man 289
+plug into 284
+border 284
+park near 282
+without 281
+
+park on side of 277
+
+
+stand beside 274
+reach for 274
+brushing 269
+run in 267
+decorate 267
+pet 266
+on surface of 264
+work on 263
+on h 261
+side 261
+look out 261
+black 258
+park in front of 257
+visible on 256
+ski down 256
+display 254
+among 254
+
+see in 250
+
+
+eat from 243
+talk to 242
+on front 235
+separate 235
+right of 229
+draw on 229
+be enjoy 228
+stick out 226
+
+walk through 223
+in center of 220
+
+park along 218
+see through 216
+lie next to 216
+
+at edge of 213
+side of 213
+sit by 212
+
+cast by 210
+serve 209
+drinking from 208
+follow 208
+park alongside 207
+on face of 206
+grow 203
+grip 203
+stop at 202
+
+mount to 199
+shin through 199
+blue 198
+sit in front of 198
+beside of 198
+lead 198
+
+walk along 196
+grab 195
+sell 194
+open 194
+point 194
+sit inside 194
+lie inside 194
+sew on 193
+walk by 191
+stand under 190
+top with 189
+i 188
+mark 188
+match 186
+top of 184
+board 184
+raise 184
+paint 182
+skiing in 182
+secure 181
+on right side of 181
+
+on left side of 180
+look in 180
+protect 177
+sniff 176
+on end of 176
+do trick on 175
+
+appear in 172
+sit near 170
+be hold 170
+right 170
+crash on 169
+grazing 168
+lay 168
+fly above 168
+lick 167
+reflect off 167
+fall on 166
+form in 166
+fly through 165
+besides 165
+
+stand inside 163
+walk near 163
+fill 163
+display on 162
+sit behind 162
+
+wait on 161
+grow next to 160
+show on 159
+enter 158
+travel on 157
+bite 157
+sit under 157
+grow near 155
+grow from 154
+on other side of 153
+sit with 153
+drape over 153
+block 151
+extend 150
+divide 150
+on left of 150
+walk up 149
+give 149
+jump 148
+grow behind 148
+and white 147
+approach 147
+balance on 147
+serve on 146
+lean over 146
+apart of 143
+hug 143
+close 142
+
+
+in corner of 142
+herd 142
+jump on 140
+green 140
+in man 139
+on head of 138
+show in 138
+chasing 138
+park behind 138
+create 137
+us 137
+walk to 137
+red 136
+hold to 135
+control 135
+brown 133
+indicate 132
+shape like 130
+move 130
+kneel on 130
+hang out of 130
+pass 129
+walk behind 129
+help 129
+cut into 127
+wait at 127
+within 127
+point at 127
+park beside 126
+get 125
+seat on 125
+
+walk next to 125
+swing at 123
+locate in 123
+on right of 122
+look over 122
+prepare 122
+
+jump over 121
+on woman 121
+tie 121
+tie around 121
+star at 120
+enclose 120
+before 119
+grasp 119
+walk towards 119
+in h 119
+carry by 119
+meet 118
+make from 116
+eating in 115
+post on 115
+open on 114
+be watch 114
+mix with 114
+visible in 114
+
+go to 113
+come through 113
+train 113
+skiing 111
+cooking in 111
+appear on 111
+in blue 111
+bend 110
+light 110
+ten 110
+
+skateboarding on 110
+with white 110
+fix 109
+out 109
+past 108
+run through 108
+climb 107
+turn 107
+lifting 107
+get on 106
+run 106
+on back 106
+up in 106
+
+
+go up 105
+rest in 105
+go through 104
+pull by 104
+run along 104
+
+look into 104
+stick to 104
+grow by 103
+come off 102
+affix to 102
+go 101
+on white 101
+at base of 100
+spray 100
+
+stand alongside 100
+in side of 100
+lean 100
+grow along 99
+move on 99
+write in 99
+on corner of 99
+
+stop on 98
+break on 97
+perform 97
+out in 97
+pile on 97
+pour 97
+fall from 97
+back of 97
+keep in 96
+exit 96
+paint in 96
+travel down 96
+at front of 96
+splash 96
+scatter on 96
+use for 96
+decorate with 96
+
+walk toward 95
+come down 94
+wash 94
+mount in 94
+go into 94
+visible through 94
+point to 94
+use by 93
+rest 93
+lay down on 93
+pose for 92
+blow out 92
+miss 92
+in white 91
+
+make by 90
+tap to 90
+line with 90
+look down at 90
+sit beside 90
+sleep in 89
+crash in 89
+seat at 89
+illuminate 89
+walk beside 89
+attach on 89
+grow beside 89
+make with 89
+during 88
+protrude from 88
+place in 88
+blow 88
+sit around 87
+up 87
+with black 87
+mount 87
+rowing 87
+reach 87
+crouch on 86
+jump in 86
+run down 85
+back 85
+in hand of 85
+pose with 85
+run across 84
+fall off 84
+at side of 84
+
+
+set on 83
+watch from 83
+skate on 83
+lie 83
+about to hit 82
+street 82
+rid down 82
+lay next to 82
+observe 82
+display in 82
+strap to 81
+yellow 80
+
+smell 80
+kick up 80
+make out of 79
+wad in 79
+work in 78
+sit atop 78
+look through 78
+plant in 78
+dock in 77
+
+jump off 77
+
+grow out of 76
+create by 76
+take picture of 76
+
+painting on 75
+cooking on 75
+build in 75
+pick up 75
+typing on 75
+chained to 74
+guide 74
+operate 74
+stand against 74
+skateboarding in 74
+embed in 74
+be on front of 74
+drag 74
+support by 73
+grow around 73
+in woman 73
+pitching 73
+
+put 73
+photograph 73
+wait in 73
+checking 73
+small 72
+lay on top of 72
+feature 72
+smile at 72
+
+dress 72
+adjust 72
+
+
+make up 71
+drink 71
+up on 71
+a 71
+
+on left 71
+cooking 70
+show through 70
+by side of 70
+stand around 70
+eat at 70
+metal 70
+wooden 69
+see on 69
+be hang from 69
+to side of 69
+anchor in 69
+wait 69
+lead up to 68
+tree 68
+
+hang by 68
+chew 68
+be play 68
+load 68
+roll on 68
+slice 68
+drive in 67
+hang in front of 67
+
+at back of 67
+stop 66
+
+up to 66
+
+away from 65
+on rear of 65
+seat in 64
+b 64
+orange 64
+stand on side of 64
+light up on 63
+snowboard on 63
+shade 63
+write 63
+wave 62
+reflection in 62
+hang behind 62
+
+dark 62
+with red 62
+on foot of 62
+haul 62
+in on 62
+instal on 62
+traffic 61
+walk past 61
+cleaning 61
+like 61
+hanging next to 61
+hang down from 61
+in black 61
+shin in 61
+in top of 61
+about 61
+walk into 61
+roll 60
+advertising 60
+
+down on 60
+steer 60
+extend from 60
+
+put on 60
+in bottom of 60
+
+run to 59
+kiss 59
+walk under 59
+splash in 59
+look like 59
+shake 59
+line up on 59
+sticking in 59
+
+stand outside 58
+with many 58
+walk in front of 58
+flow in 58
+large 58
+in brown 58
+fix to 58
+sprinkle on 57
+walk away from 57
+hang near 57
+reflection on 57
+adjacent to 57
+hook to 57
+power 57
+feed on 57
+share 57
+hide by 56
+suspend from 55
+drive alongside 55
+lead into 54
+shine on 54
+race 54
+stretch 54
+snowboard down 54
+toss 54
+plant on 53
+long 53
+
+sign 53
+scratch 53
+grow in front of 53
+look for 53
+wait to cross 52
+grow through 52
+shape 52
+crouch behind 52
+cut in 52
+peek through 52
+with h 52
+
+at foot of 52
+with open 52
+go across 52
+tow 52
+hold on 52
+on right 51
+opposite 51
+not 51
+stick into 51
+look up at 51
+spread 51
+light on 51
+stand over 51
+
+eating nut in 51
+clutch 51
+step on 51
+
+with lot of 50
+depict 50
+run from 50
+walk around 50
+bend over 50
+aside 50
+water 50
+ont 49
+roll in 49
+
+on person 49
+up against 49
+wear around 49
+run with 49
+tie on 49
+man 49
+strip 49
+stand 49
+turn on 49
+look out of 49
+tall than 49
+plastic 49
+round 48
+in red 48
+prop on 48
+hang out 48
+
+amongst 48
+h 48
+
+bear 48
+grow alongside 48
+ski 48
+hand 47
+form on 47
+wad through 47
+transport 47
+look to 47
+be make of 47
+on bottom 47
+ride by 47
+name 47
+
+move down 47
+baseball 47
+view 47
+paper 46
+frame 46
+line up in 46
+smoking 46
+relax on 46
+lie near 46
+keep 46
+shin 46
+on tip of 46
+far from 46
+serve in 46
+ear 46
+release 46
+milk 46
+hold out 46
+hair 45
+number 45
+come out 45
+be pull by 45
+with green 45
+mount above 45
+chew on 45
+jump with 45
+full 44
+door 44
+toward 44
+off of 44
+go over 44
+dock on 44
+take picture with 44
+
+be underneath 43
+cut through 43
+squat on 43
+hover over 43
+buy 43
+stand between 43
+stitch on 43
+dot 43
+possess 43
+guard 43
+leaf 43
+park alongside of 42
+spread on 42
+gather in 42
+link 42
+snowboard in 42
+near by 42
+overhang 42
+
+emit 42
+skate in 42
+eye 42
+hide behind 42
+sit against 42
+
+come to 42
+on wood 42
+be lay on 42
+draw 42
+sign on 42
+move in 42
+jump for 42
+come into 41
+grow between 41
+carve into 41
+color of 41
+ride on 41
+not wear 41
+lighting 41
+park under 41
+middle of 41
+bolt to 41
+
+jut out of 41
+fly by 41
+handle 41
+drape on 41
+hang down 41
+work 41
+
+leave on 40
+cross over 40
+eat with 40
+on middle of 40
+shirt 40
+stand underneath 40
+bloom in 40
+spelling 40
+fly on 40
+ahead of 40
+be float in 40
+wash up on 40
+head 40
+landing on 40
+onto 40
+
+build on 40
+
+
+end of 40
+crash 40
+obscure by 39
+swimming 39
+crash into 39
+lay down in 39
+window 39
+with two 39
+walk at 39
+look toward 39
+dock at 39
+park outside 39
+sticking 39
+brick 39
+race on 39
+be cross 39
+teaching 39
+stick out from 39
+lay under 39
+arrange in 38
+rest against 38
+wear in 38
+rear 38
+together with 38
+
+fly with 38
+at head of 38
+gray 38
+
+place 38
+standing in front 38
+building 38
+fold on 38
+meeting 38
+sew onto 38
+come 38
+move through 37
+
+hold up by 37
+seat 37
+hang under 37
+hold together 37
+wood 37
+run after 37
+cause 36
+bury in 36
+amid 36
+near top of 36
+hold down 36
+pick 36
+outline 36
+squat behind 36
+tail 36
+stack in 36
+
+
+chase 36
+lock to 36
+talk 36
+balance 36
+arrange on 36
+
+flip 35
+drip from 35
+
+pose on 35
+ha 35
+eat off 35
+set in 35
+folding 35
+paddle 35
+sailing in 35
+
+travel in 35
+pin to 35
+ready to 35
+computer 35
+sit down on 35
+lift off 34
+pull into 34
+on girl 34
+use a 34
+visit 34
+on black 34
+silver 34
+consist of 34
+leave by 34
+stand up in 34
+be watch from 34
+in back 34
+
+spill on 34
+mark on 34
+baked into 34
+hand on 34
+shield 34
+wait to board 34
+resemble 33
+stand above 33
+
+carve in 33
+direct 33
+n 33
+take in 33
+with brown 33
+
+rub 33
+leave in 33
+pink 33
+kneel in 33
+reach into 33
+wrap 33
+eat out of 33
+
+car 33
+bent over 33
+stand close to 33
+instal in 33
+rise from 33
+frame on 33
+om 33
+fence 33
+hold h 33
+parking 33
+hang around 32
+baby 32
+run behind 32
+poke through 32
+with blue 32
+cause by 32
+sport 32
+
+film 32
+peel off 32
+call 32
+to hold 32
+mark with 32
+sky 32
+and black 31
+relaxing in 31
+examine 31
+stir 31
+be color 31
+take during 31
+hold with 31
+table 31
+own 31
+stand up on 31
+pass by 31
+stand by 31
+can 31
+see from 31
+and yellow 31
+ready to hit 31
+swimming on 31
+come in 31
+emerge from 31
+travel 30
+eat on 30
+travel through 30
+line on 30
+litter with 30
+keep on 30
+of white 30
+work at 30
+pave with 30
+in green 30
+where 30
+lie in front of 30
+lay over 30
+perform on 30
+
+grow under 30
+drizzle on 30
+trim 30
+produce 29
+testing on 29
+melt on 29
+stand next to 29
+sit above 29
+prop against 29
+pin on 29
+fly near 29
+stand next 29
+go around 29
+Grey 29
+run alongside 29
+inspect 29
+on in 29
+tie with 29
+clasp 29
+design on 29
+place on top of 29
+build on top of 29
+high in 29
+cast onto 29
+in girl 29
+state 29
+sit on top 29
+climb on 28
+reach with 28
+see behind 28
+
+on neck of 28
+flap 28
+include 28
+paint with 28
+on blue 28
+logo on 28
+tell 28
+lay by 28
+window on 28
+
+
+feed from 28
+strike 28
+lie down on 28
+drive through 28
+roll into 28
+look towards 28
+on bathroom 28
+on building 28
+juggle 28
+on wall of 28
+stand across 28
+chip off 27
+listen to 27
+towards 27
+lay near 27
+sit underneath 27
+fall in 27
+drink from 27
+letter 27
+fall into 27
+set 27
+dangle from 27
+spray paint on 27
+smoke 27
+hang off of 27
+splash from 27
+anchor 27
+throughout 27
+with long 27
+grazing near 27
+in mouth of 27
+break in 27
+on hand of 27
+reveal 27
+stack 27
+
+
+on train 27
+amidst 27
+on boy 27
+
+
+sit down 26
+on wrist of 26
+stuff 26
+
+secure to 26
+wee 26
+submerge in 26
+picture on 26
+
+on player 26
+hang with 26
+in person 26
+emit from 26
+use on 26
+short 26
+face away from 26
+obscure 26
+splash on 26
+leg 26
+on underside of 26
+in shape of 26
+be print on 26
+sit on side of 26
+about to 26
+or 26
+
+stretch across 26
+
+lay with 26
+poke out of 26
+lay beside 26
+in background of 26
+wag 26
+of man 26
+tall 26
+
+run toward 26
+stop in 26
+recording 26
+spell 26
+compose of 26
+be close to 26
+lie close to 26
+glass 26
+trash 26
+get off 26
+tower over 26
+shopping for 26
+toilet 26
+sit between 25
+prepare to 25
+
+crouch in 25
+drink out of 25
+kick up by 25
+press 25
+lift 25
+people 25
+soil 25
+describe 25
+on body of 25
+provide 25
+grow up 25
+nose 25
+of green 25
+stew on 25
+bloom inside 25
+
+dip in 25
+mount under 25
+player 25
+after 25
+parallel to 25
+cap 25
+two 25
+
+style 25
+wall 25
+on base of 25
+bent 25
+walk out of 25
+cloud in 24
+flush 24
+lounge on 24
+shake hand with 24
+cook in 24
+skateboarding down 24
+wrap on 24
+fire 24
+with few 24
+rowing in 24
+and blue 24
+
+zebra 24
+
+on leg of 24
+jump into 24
+post 24
+dry 24
+fly from 24
+walk alongside 24
+move along 24
+part 24
+remove 24
+
+o 24
+repair 24
+shear 24
+pass through 24
+circle 24
+
+hiding in 24
+comb 24
+skiing with 24
+edge 24
+litter 24
+stack on top of 24
+load with 23
+in dark 23
+mix in 23
+lean into 23
+coffee 23
+place inside 23
+in on top of 23
+fasten to 23
+grass 23
+fold 23
+piece of 23
+in open 23
+take at 23
+tie in 23
+drill into 23
+walk outside 23
+
+on shoulder of 23
+
+
+slide into 23
+perform trick on 23
+with dark 23
+feed in 23
+crest in 23
+push into 23
+expose on 23
+break 23
+clear 23
+tuck under 23
+bathroom 23
+tend to 23
+brush 23
+gather on 22
+span 22
+hang below 22
+over top of 22
+fly at 22
+edge of 22
+be full of 22
+
+
+stand up 22
+identify 22
+fall 22
+on ten 22
+lay against 22
+float 22
+
+stick off 22
+slice on 22
+
+on to of 22
+mix into 22
+snow 22
+head down 22
+para sailing in 22
+stick up from 22
+lead up 22
+on tail of 22
+
+with short 22
+huddle with 22
+in sky 22
+tuck into 22
+
+plate 21
+stand among 21
+
+admire 21
+suspend in 21
+drop 21
+set into 21
+sit down in 21
+pull up to 21
+close on 21
+ocean 21
+prop up on 21
+
+together 21
+expose 21
+
+
+
+with raise 21
+sailing on 21
+take out of 21
+grazing from 21
+run up 21
+attach with 21
+print in 21
+try to hit 21
+skate down 21
+lie behind 21
+elephant 21
+spray in 21
+print 21
+soar in 21
+cut with 21
+hiding 21
+plug in 21
+talk in 21
+ext to 21
+leather 21
+ride in 21
+frost 21
+about to eat 21
+on arm of 21
+lay across 21
+big 21
+advertise 21
+and red 21
+mouth 20
+
+clock 20
+
+bounce 20
+skateboarding 20
+on right side 20
+crash against 20
+peel 20
+splash around 20
+use h 20
+out on 20
+bright 20
+
+go in 20
+pave 20
+push up to 20
+with attach 20
+create in 20
+
+open to 20
+
+around man 20
+
+head toward 20
+hit by 20
+tile 20
+run around 20
+top on 20
+wash on 20
+white and 20
+bus 20
+
+fall to 20
+of light on 20
+down side of 20
+
+scatter in 20
+park across 20
+roll onto 20
+
+cut from 20
+spray from 20
+cover on 20
+deliver 20
+prepare to hit 20
+be use by 20
+brushing h 20
+etch into 20
+look down 20
+
+
+hang to 20
+tuck in 20
+
+stand on back of 20
+be carry by 20
+
+extend into 20
+lack 20
+head towards 20
+blond 19
+bathing in 19
+on roof of 19
+walk between 19
+nap on 19
+mount underneath 19
+stuff in 19
+work with 19
+on piece of 19
+be eat by 19
+on display in 19
+separate from 19
+place into 19
+fly under 19
+with close 19
+ready for 19
+
+half 19
+chop 19
+tack to 19
+lie down in 19
+on other side 19
+stand in front of 19
+soar through 19
+center 19
+park on side 19
+push against 19
+helmet 19
+
+cement into 19
+
+on silver 19
+pizza 19
+at top 19
+
+mount next to 19
+stand along 19
+center of 19
+park against 19
+tethered to 19
+reflect off of 19
+in rear of 19
+on edge 19
+need 19
+be take in 19
+separate by 19
+serve with 19
+
+arrange 19
+rid through 19
+shooting 19
+sleep 19
+of water with 18
+run towards 18
+passenger 18
+dress a 18
+be to right of 18
+aboard 18
+graze in 18
+eat by 18
+bloom on 18
+plow 18
+
+fly around 18
+light up 18
+with letter 18
+sew into 18
+drive next to 18
+stand on edge of 18
+label 18
+stripe 18
+hold ten 18
+head to 18
+
+list 18
+around top of 18
+clap 18
+bake in 18
+come up 18
+on elephant 18
+shin over 18
+of red 18
+on far side of 18
+spot on 18
+recline on 18
+drive past 18
+in from of 18
+pole 18
+bend in 18
+lie under 18
+sleep with 18
+balance with 18
+for hold 18
+caution 18
+shower 18
+shirt on 18
+
+focus on 18
+
+trim in 18
+pose 18
+appear 18
+cat 18
+strap on 18
+on baseball 18
+draw in 18
+of brown 18
+rock 18
+climb up 18
+run above 18
+
+
+low in 18
+hold up h 18
+around neck of 18
+curl around 18
+be take 18
+lap 18
+spray on 18
+carry on 18
+background 18
+seal 18
+flower 18
+try to 18
+in city 18
+wear with 18
+stick 18
+stand atop 18
+
+extend over 17
+chair 17
+star out 17
+take off 17
+
+dust with 17
+on giraffe 17
+cement in 17
+for sale on 17
+skate 17
+on cat 17
+
+
+that on 17
+cell 17
+on brown 17
+half full of 17
+arrive at 17
+pile with 17
+push under 17
+mostly 17
+use to cut 17
+make in 17
+surf with 17
+middle 17
+graz on 17
+let in 17
+be hang over 17
+in pink 17
+on wall 17
+racing in 17
+license 17
+lower 17
+sleep under 17
+wave in 17
+on opposite side of 17
+to flush 17
+at rear of 17
+blow in 17
+talk with 17
+pile on top of 17
+
+together in 17
+trail 17
+draw by 17
+stuck inside 17
+
+grow above 17
+
+digging into 17
+on red 17
+
+miss from 17
+catch by 17
+speak on 17
+suspend on 17
+
+have fun in 17
+strew on 17
+carve on 17
+haired 17
+be park alongside of 17
+one 16
+
+cast in 16
+kitchen 16
+wheel 16
+run into 16
+
+lose 16
+jacket 16
+nearest 16
+not in 16
+graz in 16
+hide 16
+attend 16
+who 16
+clip to 16
+glare on 16
+drive up 16
+teddy 16
+build next to 16
+point with 16
+wipe 16
+nail to 16
+steel 16
+paddle on 16
+on kitchen 16
+
+near edge of 16
+cling to 16
+hang between 16
+signal 16
+point toward 16
+block by 16
+atop of 16
+provide shade for 16
+burn 16
+fly next to 16
+stick through 16
+left side of 16
+insert in 16
+use in 16
+wait next to 16
+imprint on 16
+to cut 16
+white on 16
+on metal 16
+drape across 16
+to right 16
+with big 16
+get ready to 16
+in row with 16
+painting 16
+on left side 16
+float above 16
+
+near front of 16
+
+skateboarding at 16
+look away from 16
+shopping in 16
+lock on 16
+on center of 16
+
+mount inside 16
+floor 16
+
+on tree 16
+digging 16
+nex to 16
+in right 16
+area 16
+black in 16
+upon 16
+of black 16
+overhead 16
+unload 16
+ide of 16
+be face 16
+bare 16
+around h 15
+form by 15
+be cast on 15
+huge 15
+look on 15
+drive behind 15
+add on 15
+make up of 15
+to enter 15
+safety 15
+pack 15
+slide 15
+park before 15
+billow from 15
+stack with 15
+on small 15
+skateboard 15
+in center 15
+for play 15
+set behind 15
+perpendicular to 15
+
+with orange 15
+fall out of 15
+group with 15
+peek over 15
+skiing through 15
+bird 15
+go up to 15
+
+on green 15
+
+swim close to 15
+soccer 15
+grow over 15
+with large 15
+at end 15
+belong 15
+grind 15
+on wooden 15
+lie underneath 15
+have paint 15
+on fade of 15
+grazing next to 15
+wait to 15
+body of 15
+
+logo 15
+face in 15
+slide to 15
+small than 15
+
+dog 15
+perform in 15
+fight over 15
+hold hand with 15
+try to get 15
+grind on 15
+with silver 15
+slide on 15
+get into 15
+
+to protect 15
+mock 15
+fold over 15
+nuzzle 15
+stone 15
+smile 15
+apart from 15
+skiing have 15
+move toward 15
+stick out h 15
+hardwood 15
+drip on 15
+
+track 15
+round up 15
+and brown 15
+bend h 15
+gather 15
+on ground 15
+go under 15
+sleep on top of 15
+pair of 15
+four 14
+come in to 14
+pile in 14
+shin off 14
+instal 14
+with gray 14
+lead from 14
+write with 14
+and white ocean 14
+leg of 14
+scatter 14
+encase 14
+return 14
+come off of 14
+off in 14
+grill 14
+horse 14
+numeral on 14
+in in 14
+smear on 14
+indicate on 14
+overlap 14
+place onto 14
+run over 14
+slide down 14
+do n't have 14
+behind of 14
+hover above 14
+jut into 14
+nursing 14
+with glass 14
+bent at 14
+tell time on 14
+on one 14
+glide on 14
+be stand by 14
+dangle 14
+drip off 14
+throw by 14
+cast from 14
+occupy 14
+
+drive by 14
+on bus 14
+hang inside 14
+fight 14
+embrace 14
+wait to get on 14
+lean towards 14
+on horse 14
+pitch 14
+lay behind 14
+gather around 14
+shave 14
+take photo of 14
+post in 14
+happen to be 14
+be tie to 14
+letter on 14
+emanate from 14
+of walk 14
+cross h 14
+smile in 14
+on zebra 14
+
+
+try to fly 14
+do trick in 14
+lay out on 14
+lean in 14
+paste on 14
+be board 14
+
+peak through 14
+upside down on 14
+large than 14
+high on 14
+shiny 14
+fix in 14
+ski on 14
+store in 14
+
+in front of white 14
+suspend over 14
+
+shoe 14
+weave 14
+come towards 14
+read on 14
+toy 14
+plug 14
+cook 14
+place next to 14
+instal to 14
+run between 14
+go for 14
+suck 14
+anchor to 14
+fly close to 14
+accompany 14
+to keep 14
+descend 14
+grassy 14
+hold back 14
+concentrate on 14
+shin from 14
+of water on 14
+tip 14
+fasten 14
+with hand on 14
+full with 14
+reflect from 14
+almost touch 13
+on pair of 13
+retrieve 13
+fasten by 13
+glide through 13
+reach in 13
+hat 13
+mix 13
+decker 13
+munch on 13
+located behind 13
+glowing on 13
+spin on 13
+
+cement on 13
+on water 13
+to left 13
+string between 13
+of two 13
+be beyond 13
+imprint in 13
+roll to 13
+on dog 13
+extend h 13
+wheel of 13
+sit outside 13
+look from 13
+hover in 13
+in vase 13
+lean out of 13
+stick from 13
+park between 13
+roll toward 13
+erect on 13
+bench 13
+pour into 13
+od 13
+be line 13
+
+motorcycle 13
+on brick 13
+frame in 13
+spread over 13
+in player 13
+in parking 13
+bring 13
+be hang 13
+happen 13
+low to 13
+project on 13
+in field of 13
+curve around 13
+poke 13
+sit along 13
+come on 13
+
+watch in 13
+on lap of 13
+stand below 13
+anchor at 13
+tend 13
+with hand in 13
+land on 13
+sit next 13
+end in 13
+fall over 13
+hide in 13
+with blond 13
+spread across 13
+peek out of 13
+be off 13
+stand on one 13
+to hit 13
+
+take from 13
+plant 13
+lean toward 13
+order 13
+look inside 13
+build around 13
+be hold up by 13
+

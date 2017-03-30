@@ -1,0 +1,105 @@
+on,be on, s
+have, have on,have black,have white,have brown,have many,have long,have two,have red,have open,have short,have blue,have green,have color,have right,have yellow,have dark,have large,have four,have lot of,have leave,have word,have left,have front,have orange,have small,have pink,have number, have big,have blond,have gray,have three,have silver,have few, have Grey,have hand on,have close,have raise,have metal,have window,p
+in,be in,s
+wear,wear black,be wear,wear blue, wear white,wear red,wear green,wear brown,wear Grey,wear yellow,wear pair of,wear pink,wear dark,wear over,wear gray,wear orange,wear striped,wear with,v
+of, be of,p
+with, be with,p
+hold,hold up,v
+behind,be behind,v
+on top of,be on top of, on top,o top of,s
+near,be near,near to,s
+next to,be next to,next to lot of,next,s
+under,be under,s
+by, be by,p
+sit on,be sit on,sit on top of,sit,sit on back of,sit o,v
+above,be above,s
+in front of,in front, be in front of,on front of,s
+on side of ,on side, be on side of,s
+attach to, be attach to,attach to side of,v
+at,be at,p
+over,be over,s
+for,be for,p
+ride,rid,rid on,be rid,rid on top of,rid in,v
+stand on,stand on top of,be stand on,stand on top,v
+around,be around,p
+beside,be beside,be beside of,p
+inside,be inside,be inside of,on inside of,s
+hang on,be hang on,hang on side of,hang onto,hang from,v
+standing in,be stand in,v
+carry,be carry,v
+cover,be cover,partially cover,v
+eat,be eat,v
+walk on,be walk on,walk on top of,walk down,v
+play,play with,play in,play on,be play at,play at,be play,play tennis on,play soccer on,play in front of,play near,play at,v
+sit in,be sit in,sit inside of,sit in back of,v
+watch, be watch,v
+belong to,v
+lay on,lay on top of,be lay on,lie on,lie on top of,be lie on,lie on top of,v
+along,alongside,along side of,along side,be along,along edge of,be alongside,along top of,p
+below,be below,s
+between,between two,be between,s
+look at,look at h,be look at,v
+against,be against,p
+paint on,be paint on,paint onto,v
+from,be from,p
+park,park at,be park on,park in,park on,v
+to,p
+cover in,be cover in,v
+say,v
+mount on,mount on top of,be mount on top of,be mount on,v
+fly in,be fly in,v
+part of,be part of,p
+use,be use,v
+across,across from,be across,p
+on back of, be on back of,s
+grow on,be grow on,grow on top of,grow on side of,v
+cross,v
+walk in,be walk in,v
+fly,be fly,v
+sit at,be sit at,v
+contain,v
+swing,ready to swing,swing h,about to swing,v
+outside,outside of,be outside of,on outside of,standing outside of,be outside,grow outside,outside on,outside in,s
+wear by,be wear by,v
+underneath,be underneath,s
+print on,be print on,v
+pull,v
+hang in,v
+fill with,be fill with,v
+show,v
+beneath, be beneath,s
+support,v
+cover with,cover by,be cover with,v
+hit,v
+in middle of,in middle,be in middle of,s
+touch,be touch,v
+surround,be surround,v
+standing next to,v
+build into,v
+lean on,v
+cast,v
+throw,about to throw,prepare to throw,v
+adorn,v
+lay in,v
+rest on,be rest on,rest on top of,v
+grow in,be grow in,v
+write on,write on side of,be write on,v
+drive on,v
+stand behind,v
+connect to,be connect to,connect with,connect,v
+cut,be cut,v
+hold by,be hold by,v
+standing by,v
+catch, try to catch,jump to catch,to catch,about to catch,ready to catch,v
+walk,v
+read,v
+face,face group of,v
+on bottom of,be on bottom of,bottom of,s
+reflect in,v
+tall than,be tall than,tall than other,c
+large than,big than,slightly big than,big than other,c
+short than,appear short than,c
+small than,c
+tall than,c
+tall than:short than,c
+small than:large than,c

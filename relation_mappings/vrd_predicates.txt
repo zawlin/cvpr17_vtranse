@@ -1,0 +1,70 @@
+above,s
+across,p
+adjacent to,s
+against,p
+at,p
+attach to,v
+behind,s
+below,s
+beneath,s
+beside,s
+by,p
+carry,v
+contain,v
+cover,v
+drive,v
+drive on,v
+eat,v
+face,v
+feed,v
+fly,v
+follow,v
+has,p
+hit,v
+hold,v
+in,s
+in the front of,s
+inside,s
+kick,v
+lean on,v
+look,v
+lying on,v
+near,s
+next to,s
+on,s
+on the left of,s
+on the right of,s
+on the top of,s
+outside of,s
+over,s
+park behind,v
+park next,v
+park on,v
+play with,v
+pull,v
+rest on,v
+ride,v
+sit behind,v
+sit next to,v
+sit on,v
+sit under,v
+skate on,v
+sleep next to,v
+sleep on,v
+stand behind,v
+stand next to,v
+stand on,v
+stand under,v
+talk,v
+taller than,c
+touch,v
+under,s
+use,v
+walk,v
+walk beside,v
+walk next to,v
+walk past,v
+walk to,v
+watch,v
+wear,v
+with,p

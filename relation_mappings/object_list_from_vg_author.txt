@@ -1,0 +1,889 @@
+person, man, guy, men, pedestrian, person standing, teenager, male, human, adult, young man, tall young man, worker, someone, character
+boy, child, kid, little boy, young boy, young child,
+toddler, baby
+girl, little girl, young girl
+woman, lady, smiling woman, female, young woman, old woman
+window, glass window, passenger window, small window, side window, front window, pane, window pane, window frame
+tree, christmas tree, green tree, tall tree, old tree, evergreen tree, palm tree, pine tree, evergreen
+building, tall building, skyscraper, brick building, mighty building, white building
+shirt, tshirt, white shirt, blue shirt, orange shirt, tee shirt, black shirt, pink shirt, red shirt, green shirt, undershirt, yellow shirt, striped shirt, gray shirt, tank top, tanktop, blouse, yellow shirt
+wall, white wall, stone wall, wallpaper
+sign, signpost, street sign, stop sign, road sign, yellow sign, traffic sign, white sign, red sign, green sign, signboard, signal, traffic signal, sign post, blue sign, signal light, green light, traffic light, red light,stop light, stoplight, stop
+gress
+cloud, white cloud, cloudy, cloud sky, cloudy sky
+table, wood table, kitchen table, dining table, coffee table, table top, picnic table, end table, tabletop, wooden table, side table
+pole, post, telephone pole, utility pole, metal pole, flag pole, flagpole, black pole, wooden pole,
+wooden post
+car, vehicle, police car, red car, silver car, parked car, blue car, automobile, white car, black car, minivan, jeep, sedan, passenger car, buggy
+water, blue water
+hand, left hand, right hand, someone hand, man hand, woman hand, palm
+leg, front leg, back leg, right leg, left leg, hind leg, thigh
+leaf, tree leaf, green leaf
+head, face, man head, person head, woman head, giraffe head, forehead, cheek, man face
+plate, white plate, paper plate, plate food,
+train, train car, locomotive
+ear, left ear, right ear
+shoe, tennis shoe, black shoe, white shoe, shoelace, sole, slipper
+eye, black eye, left eye, right eye
+flower, white flower, yellow flower, pink flower, purple flower, red flower, petal, flower petal, bouquet, tulip, sunflower
+wheel, spoke, front wheel, back wheel, rear wheel, black wheel, hubcap, rim
+giraffe
+door, doorway, cabinet door, garage door, door frame, oven door, white door, glass door
+chair, office chair, folding chair, lounge chair, armchair, beach chair, wooden chair, stool
+bus, school bus
+fence, fence post, fencing, metal fence, wooden fence
+elephant, baby elephant, elephant trunk
+snow, white snow, snowflake, fresh snow
+pants, pant, jean, jeans, tights, blue jean, white pant, black pant, trouser, snow pant, blue pant
+hat, red hat, fancy hat, black hat, white hat, cowboy hat, cap, baseball cap, white cap, baseball hat, beanie
+road, street, city street, walkway, path, trail, pathway, roadway, highway, lane, overpass
+horse, pony, brown horse
+zebra
+plane, airplane, jet, cockpit, aircraft
+rock, boulder, large rock, rock wall, pebble, stone, slab
+dog, puppy, playful dog
+glass, cup, wine glass, plastic cup, coffee cup, coffee mug, jug
+boat, sailboat, ship, sail boat, white boat, yacht
+jacket, coat, hoodie, black jacket, blue jacket, red jacket, ski jacket, black coat
+bird, pigeon, black bird, seagull, parrot, swan, turkey, ostrich
+clock, clock tower, clock face, clock hand, minute hand, hour hand
+cat, kitten,
+cow, brown cow, black cow, bull, cattle, calf
+sheep, white sheep, lamb, ram
+nose, black nose, nostril, snout
+sidewalk, side walk
+crosswalk, intersection
+tail
+umbrella, red umbrella, parasol
+arm, left arm, right arm
+bench, park bench, wooden bench
+helmet
+shorts, short, black short, blue short, white short
+tracks, track, train track, railroad, railroad track
+bag, paper bag, shopping bag, black bag, plastic bag
+pizza, pizza slice, pizza crust
+tile, white tile, floor tile, tile floor, grout
+foot, right foot, left foot, heel, ankle
+motorcycle, motorbike, moped
+bottle, water bottle,
+bear, polar bear
+kite
+truck, food truck, firetruck, pickup truck, white truck, fire truck
+banana, yellow banana, banana bunch, plantain 108
+player
+food, fresh food
+wave,
+tire, front tire, back tire, black tire, rear tire
+bush, green bush
+bowl
+bike
+book, notebook
+pillow, white pillow, throw pillow
+skateboard, skate board
+surfboard, white surfboard, surf board
+box, pizza box, brown box, cardboard box, batter box,
+roof, rooftop, shingle
+house, white house, home, shelter
+shelf, bookshelf, book shelf, bookcase
+bed
+mountain, hill, hillside, hill side, ridge, mountain range, mountain top, mountain side, peak, range
+glove
+desk, wooden desk
+mouth
+flag, american flag
+toilet, urinal, toilet seat, toilet bowl, toilet lid, toilet tank, white toilet
+laptop, computer, laptop computer, desktop
+paper, white paper
+sink, faucet
+beach, sand
+lamp, lamp shade, lampshade, floor lamp
+counter, counter top, countertop
+seat
+vase, vas
+headlight, head light
+wing, left wing, right wing, tail wing
+ball
+cake, birthday cake
+cupcake, muffin
+cabinet, cupboard
+ski, skiis
+neck,
+sock, white sock, black sock
+phone, cell phone, telephone, cellphone
+sunglass, sun glass
+eyeglass, eye glass
+skier, skiier, skiing
+orange, orange slice
+tower
+towel, white towel, paper towel, towel rack
+tie, necktie
+container, canister
+frisbee
+finger
+ocean, ocean wave, ocean water, sea,
+curtain, drape
+fruit, apple
+keyboard
+racket, tennis racket, tennis racquet, racquet
+suitcase
+pot, pottery, teapot, kettle, tea kettle, urn
+fur
+carpet
+wood, wooden
+windshield
+bicycle
+basket
+engine, train engine, jet engine, motor
+couch, sofa
+knife
+fork
+sandwich, sandwhich
+horn
+boot, ski boot
+carrot
+bat, baseball bat
+broccoli, broccoli floret, brocolli
+paw
+surfer, surf, surfing
+vegetable, veggie, produce
+sneaker
+backpack, back pack
+street light, streetlight, light pole, light post, lamp post, street lamp, lamppost, streetlamp
+tray
+drawer
+blanket, comforter, quilt, bedspread
+collar
+napkin
+bread, toast
+cheese
+watch, wrist watch, wristwatch
+uniform, baseball uniform
+tomato, tomatoe, tomato slice
+stem
+lid
+court
+dress
+refrigerator, freezer, small refrigerator
+bathroom, restroom
+van
+key
+bridge
+sweater, sweatshirt
+pavement, concrete, tarmac, cement, asphalt
+strap
+tablecloth, table cloth
+camera
+candle
+faucet
+sleeve, cuff
+teddy bear, stuffed animal, teddy, stuffed bear
+platform, stage
+suit, black suit,
+spoon
+dish
+tennis ball, blue tennis ball
+ripple
+hydrant, fire hydrant
+meat, beef, steak
+pipe
+snowboard, snow board
+wrist
+stove, stovetop, burner, stove top
+mouse, computer mouse, white mouse
+statue
+luggage
+ski pole
+stick
+vest
+tv, television
+trash, bin, trash bin, trashcan, trash bag, garbage
+monitor, computer screen, computer monitor
+spectator, audience
+step
+rug
+ring
+hot dog
+knee
+banner
+kitchen
+license plate
+catcher
+goggles
+chain
+oven
+belt
+cloth, clothes, clothing, fabric, material
+onion
+pillar
+stair, staircase, stairway
+remote, remote control, control
+beak
+stroller
+jersey
+pond, lake
+zucchini
+ramp
+mud
+package
+skateboarder, skater, skate
+balcony
+purse, handbag
+tusk
+garage
+doughnut, donut
+gravel
+weed
+tennis court
+window sill, sill, windowsill
+park
+skirt
+outdoors
+bun
+pen, pencil
+bracelet
+wetsuit, wet suit
+batter
+pan, skillet
+awning, canopy, covering
+umpire
+gate
+whisker,
+blender, mixer
+column
+barn, red barn
+pepper, red pepper, green pepper, bell pepper
+scarf
+graffiti, grafitti
+cart
+microwave
+river, stream
+cover
+net, netting, tennis net
+ponytail, pony tail
+tree trunk, log
+band
+shore, shoreline
+tip
+easel
+duck
+bolt
+jar
+mail, mailbox
+pocket
+green
+metal, steel
+sheet
+necklace
+nintendo wii, wii
+sun, sunlight, sunshine, sunset
+cliffside, cliff
+maid
+cereal, box cereal
+postman
+wine
+driver, ups driver, driver
+tent
+runway
+panel
+scissors, scissor
+baseball
+speaker
+crack
+shoulder
+topping
+mug
+shrub
+poster
+sandal, flip flop
+toy
+painting, portrait, drawing, mural, art, artwork
+crust
+snowboarder
+beard, goatee
+hen
+star
+fridge
+slice
+holder
+white line
+controller, wii controller, game controller, wii remote
+advertisement, advertising, ad
+cushion
+outlet, electrical outlet, socket
+utensil, silverware
+bucket, pail
+city, town
+criminal
+barber, skilled barber
+baseball player
+toothbrush,
+brush, comb
+hospital
+worm, fat worm
+coop, wooden coop
+treadmill, large treadmill
+fan, ceiling fan, sport fan
+vent
+pitcher
+store, storefront, shop, market, store front, business
+forest
+lettuce, salad
+chimney
+jug milk, milk
+tennis player
+slope
+pepperoni
+cable
+video game
+goat, little goat
+rider, jockey
+earring
+propeller
+hood
+teeth, tooth
+tank
+decoration
+potato
+outfit, costume
+case
+parking lot, lot
+symbol
+chicken
+egg
+ribbon
+wristband, wrist band, sweatband
+frosting, icing
+crowd
+wiper, windshield wiper
+straw
+power line
+suv
+thumb
+toilet paper, toiletry
+hotdog
+mushroom
+marking
+elbow
+block
+smoke, smoke stack
+dock
+nail, fingernail, toenail
+hay
+liquid, drink, beverage
+ladder
+headboard, bed frame
+bumper
+display
+eyebrow
+rose
+strawberry
+berry
+blueberry
+raspberry
+tub, bath tub, bathtub
+screw
+meter, parking meter
+footprint, foot print
+scooter
+olive
+station, train station, bus stop, train platform
+chest
+tongue
+cleat
+passenger
+grill
+lip
+game
+pastry
+slat, beam, plank
+mat, placemat, place mat
+sprinkle
+headband, bandana, head band
+airport
+claw
+sail, parasail
+pad, padding, knee pad, elbow pad, kneepad
+mask, face mask
+barrier, barricade
+print, printer
+arch, archway
+crate
+grape
+mitt, catcher mitt, baseball glove
+foam, bubble
+shutter
+lemon
+hinge
+border
+pile, stack
+fireplace
+tail light, brake light, taillight
+fry, french fry
+lace
+zipper
+beer, beer bottle
+crumb, debris, speck, dust
+balloon
+drain
+wrinkle
+magnet
+shower, shower curtain, shower head, shower door
+ledge
+landing gear
+roll
+stain
+visor
+leash
+cross
+tattoo
+magazine
+rice
+enclosure
+bow, bow tie, bowtie
+home plate
+restaurant
+soap, soap dispenser, soap dish
+sausage
+tarp
+apron
+dessert
+cutting board
+chin
+bean
+trailer
+tape
+switch, light switch
+hook
+heart
+bunch
+dresser
+carriage
+mound, pitcher mound
+church,
+steeple, spire
+tennis, tennis match
+machine, device, tool, appliance
+emblem
+doll
+smile
+ketchup
+coffee
+bell
+dispenser
+plastic
+saucer
+saddle
+light fixture, lighting, ceiling light, light bulb, skylight, fixture, bulb, chandelier
+antenna
+hedge
+menu
+fish
+hose
+tissue, tissue box
+billboard, large billboard
+cage
+pickle, cucumber
+baseball field, outfield,
+belly
+soup
+entrance, opening
+card
+ice
+traffic
+fin, tail fin
+newspaper
+deck
+gear, equipment
+puddle
+barrel
+bacon
+marker
+harness
+plug
+moss
+lock
+mast
+crane
+meal, lunch, dinner, breakfast
+cooler
+zoo
+cab, taxi
+soda
+headphone
+reflector
+nightstand, night stand
+chip
+grate
+support
+mustard
+bark
+seed
+microphone
+wine bottle
+toe
+knot
+buoy
+platter
+dugout
+nut
+pool
+paddle, oar
+mattress
+soccer ball
+spinach
+noodle
+splash, backsplash
+wagon
+bleacher
+sculpture, carving
+shaker, salt shaker, pepper shaker, salt
+furniture
+tube
+wool
+chocolate
+juice, orange juice
+candy
+porch
+dishwasher
+island
+triangle
+bracket
+ski lift, lift
+fender
+center, middle, median
+dial
+pedal
+dome
+diamond
+bead
+limb
+lap
+cookie, cooky
+note
+wrapper, wrap
+time
+pie
+hanger
+kickstand
+vine, ivy
+fire, flame
+pear
+buckle
+ham
+icon
+globe, map
+pineapple
+lion, huge lion,
+corn
+cream
+cd, disk, dvd, disc
+plaque
+spatula
+sugar
+bank
+goose
+bridle, rein
+tunnel
+cabin
+flamingo
+waist
+foil
+toaster
+side mirror, rearview mirror
+lighthouse
+rust
+bristle
+carton
+armrest, arm rest
+driveway
+picture frame, framed picture
+guitar
+ornament
+divider
+steam
+brick wall,
+pasta
+clip
+ottoman
+pea
+stalk
+door handle, door knob, doorknob
+herd
+stump
+mouse pad, mousepad
+latch
+butterfly
+pancake
+panda
+pumpkin
+guard, shin guard
+canoe, kayak, raft
+fountain
+steering wheel
+mantle
+pilot
+shed
+trolley
+mannequin
+toothpick
+cigarette
+chopstick
+rain
+stadium
+facial hair, mustache
+butter
+cardboard
+ski slope, ski track
+booth
+muzzle
+herb
+skate park, skatepark
+lime
+soccer player, soccer
+air conditioner
+feeder
+lens
+cabbage
+burger, hamburger
+pack
+stall
+coaster
+radiator, heater
+spray
+squirrel, little squirrel
+manhole, manhole cover
+peach
+mother
+watermelon
+peel
+police officer, police, policeman, officer, cop
+cherry
+bud
+pig
+motorcyclist, cyclist, biker
+shrimp
+watermark
+lanyard
+cauliflower
+office
+photographer
+badge
+bagel
+baseboard
+robe, gown
+bang
+pedestal
+tap
+piano
+tine
+avocado
+fireman, young fireman
+pin
+lantern
+wake
+coffee maker, coffee pot
+deer
+flower pot, planter, potted plant,
+trick
+celery
+dough
+brace
+packet
+vanity
+harbor
+lizard
+seaweed
+leave
+compartment
+hip
+hotel
+monkey
+basin
+briefcase
+basil
+grip
+plain
+scale
+eyelash
+ski pant, ski suit
+root
+bride
+set
+bill
+owl
+toothpaste
+cracker
+fox
+rectangle
+bib
+folder
+skull
+chef
+soldier
+seasoning, spice, condiment
+tongs
+needle
+ipod
+seam
+tractor
+desert
+llama
+snowsuit
+tablet
+calendar
+hairdresser
+squash
+valve
+blazer
+exhaust pipe
+dandelion
+hut
+crown
+gas tank
+fog
+antelope
+cactus
+gutter
+can
+tangerine
+butt, rear
+scoreboard
+wallet
+candle holder
+green bean
+roadside
+hallway
+page
+stirrup
+ox
+parachute
+guard rail, handrail, hand rail
+gun
+prong
+binder
+fern
+mulch
+paneling
+pew
+spectacle
+swimsuit, bikini, swim trunk, bathing suit
+tin
+braid
+helicopter
+castle
+radio
+subway
+torso
+rag
+charger
+groom
+name tag
+pine
+clay
+crest
+moon
+thread
+closet
+moustache
+stocking
+tassel
+pajama
+tv stand
+chalk
+glaze
+legging
+monument
+shield
+dumpster
+muffler
+radish
+tea
+parsley
+melon
+bike rack
+conductor
+keypad
+shell
+dryer
+oil
+bump
+drum
+boardwalk, pier
+gold
+mitten
+vein
+coin
+garnish
+grain
+silhouette
+podium
+sack
+orange cone, safety cone, traffic cone,
+cone, ice cream cone, ice cream
+runner
+gap
+life jacket
+match
+pylon
+referee
+spike
+canal
+suspender
+cane
+playground
+sponge
+cobblestone
+donkey
+flyer
+link
+drop, droplet
+slide
+spout
+pallet
+tomato sauce
+asparagus
+breast
+cargo
+life preserver
+weather vane
+garlic
+lipstick
+pump
+brake
+envelope
+gazelle
+goal
+nike logo
+syrup
+fire extinguisher
+gravy
+pillowcase, pillow case
+tortilla
+chalkboard
+plunger
+broom
+mango
+wreath
+battery
+powerlines
+stitching
+kiwi
+cape
+carrier
+iron
+knuckle
+toilet brush
+buffalo
+ingredient
+flour
+gas station
+swirl
+tripod
+brownie
+croissant
+yarn
+ashtray
+canvas
+rainbow
+turbine
+
