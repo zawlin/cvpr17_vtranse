@@ -4,6 +4,7 @@ This implements "Visual Translation Embedding Network for Visual Relation Detect
 * object detectors training and data preprocessor for vrd and vg.
 * vg canonicalization
 * two-stage relation training code for vrd and vg.
+* evaluation code for vg+vrd adapted from Lu (https://github.com/Prof-Lu-Cewu/Visual-Relationship-Detection)
 
 #### Coming soon
 * todo
