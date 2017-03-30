@@ -1,0 +1,167 @@
+% this code is revised based on ILSVRC 2013 (http://www.image-net.org/challenges/LSVRC/2013/)
+
+function  top_recall  = top_recall_Relationship(Nre, tuple_confs_cell, tuple_labels_cell, sub_bboxes_cell, obj_bboxes_cell)
+
+ 
+load('gt.mat','gt_rlp_labels','gt_obj_bboxes','gt_sub_bboxes');
+gt_tuple_label = gt_rlp_labels;
+%num_imgs = length(gt_tuple_label);
+num_imgs = 25858;
+
+% for i=1:num_imgs
+%     if ~isempty(gt_tuple_label{i})
+%         %v
+%         %spatial_labels = [2, 7, 8, 9, 14, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 34, 35, 36, 37, 39, 40, 41, 46, 47, 48, 49, 50, 61, 62, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 77, 78, 79, 80, 81, 82, 83, 84, 86, 88, 91, 92, 93, 94, 95, 96, 97, 99];
+%         %p
+%         %spatial_labels=[1, 3, 4, 5, 6, 12, 15, 32, 33, 38, 53, 63, 87, 98];
+%         %s
+%         %spatial_labels = [0, 10, 11, 13, 42, 43, 44, 45, 51, 52, 54, 55, 56, 57, 58, 59, 60, 89, 90];
+%         %c
+%         %spatial_labels = [76,85];
+%         spatial_idx = ismember(gt_tuple_label{i}(:,2),spatial_labels);
+%         gt_tuple_label{i}=gt_tuple_label{i}(spatial_idx,:);
+%         gt_obj_bboxes{i} = gt_obj_bboxes{i}(spatial_idx,:);
+%         gt_sub_bboxes{i} = gt_sub_bboxes{i}(spatial_idx,:);
+%     end
+% end
+for i=1:num_imgs
+    [tuple_confs_cell{i}, ind] = sort(tuple_confs_cell{i},'descend');
+    if length(ind) >= Nre
+        tuple_confs_cell{i} = tuple_confs_cell{i}(1:Nre);
+        tuple_labels_cell{i} = tuple_labels_cell{i}(ind(1:Nre),:);
+        obj_bboxes_cell{i} = obj_bboxes_cell{i}(ind(1:Nre),:);
+        sub_bboxes_cell{i} = sub_bboxes_cell{i}(ind(1:Nre),:);
+    else
+        tuple_labels_cell{i} = tuple_labels_cell{i}(ind,:);
+        obj_bboxes_cell{i} = obj_bboxes_cell{i}(ind,:);
+        sub_bboxes_cell{i} = sub_bboxes_cell{i}(ind,:);
+    end
+    
+    
+%      ind = tuple_confs_cell{i}>.4;
+%      tuple_confs_cell{i} = tuple_confs_cell{i}(ind);
+%         tuple_labels_cell{i} = tuple_labels_cell{i}(ind,:);
+%         obj_bboxes_cell{i} = obj_bboxes_cell{i}(ind,:);
+%         sub_bboxes_cell{i} = sub_bboxes_cell{i}(ind,:);
+end
+
+num_pos_tuple = 0;
+for ii = 1 : num_imgs
+    num_pos_tuple = num_pos_tuple + size(gt_tuple_label{ii},1);
+end
+ 
+
+tp_cell = cell(1,num_imgs);
+fp_cell = cell(1,num_imgs);
+ 
+gt_thr = 0.5;
+iterc = 0;
+
+
+% iterate over images
+for i=1:num_imgs 
+%     if mod(i,1000)==0
+%         disp(i)
+%     end
+    gt_tupLabel = gt_tuple_label{i};
+    gt_objBox = gt_obj_bboxes{i};
+    gt_subBox = gt_sub_bboxes{i};
+     
+    num_gt_tuple = size(gt_tupLabel,1);
+    gt_detected = zeros(1,num_gt_tuple);
+   
+    labels = tuple_labels_cell{i};
+%     if ~isempty(labels)
+%         labels(:,2) = labels(:,2)+1;
+%     end
+    boxObj = obj_bboxes_cell{i};
+    boxSub = sub_bboxes_cell{i};
+
+    num_obj = size(labels,1);
+    tp = zeros(1,num_obj);
+    fp = zeros(1,num_obj);
+    for j=1:num_obj
+
+        bbO = boxObj(j,:);
+        bbS = boxSub(j,:);
+        ovmax = -inf;
+        kmax = -1;
+        
+        for k=1:num_gt_tuple
+            if norm(labels(j,:) - gt_tupLabel(k,:),2) ~= 0
+                continue;
+            end
+            if gt_detected(k) > 0
+                continue;
+            end
+            
+            bbgtO = gt_objBox(k,:);
+            bbgtS = gt_subBox(k,:);
+            
+            biO=[max(bbO(1),bbgtO(1)) ; max(bbO(2),bbgtO(2)) ; min(bbO(3),bbgtO(3)) ; min(bbO(4),bbgtO(4))];
+            iwO=biO(3)-biO(1)+1;
+            ihO=biO(4)-biO(2)+1;
+        
+            biS=[max(bbS(1),bbgtS(1)) ; max(bbS(2),bbgtS(2)) ; min(bbS(3),bbgtS(3)) ; min(bbS(4),bbgtS(4))];
+            iwS=biS(3)-biS(1)+1;
+            ihS=biS(4)-biS(2)+1;
+            
+            if iwO>0 & ihO>0 &  iwS>0 & ihS>0                  
+                % compute overlap as area of intersection / area of union
+                uaO=(bbO(3)-bbO(1)+1)*(bbO(4)-bbO(2)+1)+...
+                   (bbgtO(3)-bbgtO(1)+1)*(bbgtO(4)-bbgtO(2)+1)-...
+                   iwO*ihO;
+                ovO =iwO*ihO/uaO;
+                
+                uaS=(bbS(3)-bbS(1)+1)*(bbS(4)-bbS(2)+1)+...
+                   (bbgtS(3)-bbgtS(1)+1)*(bbgtS(4)-bbgtS(2)+1)-...
+                   iwS*ihS;
+                ovS =iwS*ihS/uaS;
+                ov = min([ovO,ovS]);
+                
+                % makes sure that this object is detected according
+                % to its individual threshold
+                %if ov >=  gt_thr && ov > ovmax
+                if ov >=  gt_thr && ov > ovmax
+                    ovmax=ov;
+                    kmax=k;
+                end
+            end
+        end
+        
+        if kmax > 0
+            tp(j) = 1;
+            gt_detected(kmax) = 1;
+            
+        else
+            fp(j) = 1;
+        end
+    end
+
+    % put back into global vector
+    tp_cell{i} = tp;
+    fp_cell{i} = fp;
+
+
+end
+t = tic;
+tp_all = [];
+fp_all = [];
+confs = [];
+for ii = 1 : num_imgs
+tp_all = [tp_all; tp_cell{ii}(:) ];
+fp_all = [fp_all; fp_cell{ii}(:) ];
+confs = [confs; tuple_confs_cell{ii}(:)];
+end
+
+[confs, ind] = sort(confs,'descend');
+tp_all = tp_all(ind);
+fp_all = fp_all(ind); 
+
+ 
+tp = cumsum(tp_all );
+fp = cumsum(fp_all );
+recall =(tp/num_pos_tuple);
+top_recall = recall(end);
+
+end
