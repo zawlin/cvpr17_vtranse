@@ -20,7 +20,8 @@ This implements "Visual Translation Embedding Network for Visual Relation Detect
     * https://www.dropbox.com/s/29pnw7hyoo1fvd8/vr_rel_model.caffemodel?dl=0
 
 #### Coming soon
-* todo
+* instructions for running training
+* demo code
 
 #### Setup
 ##### Object Detector
