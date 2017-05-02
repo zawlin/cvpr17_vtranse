@@ -62,116 +62,6 @@ class SpellingReplacer(object):
         else:
             return word
 
-def hanwang_help_region_descriptions():
-    client = MongoClient("mongodb://localhost:27017")
-    db = client.visual_genome
-    db_results = db.region_descriptions.find(no_cursor_timeout=True)
-
-    cnt = 0
-    start = time.time()
-    last = time.time()
-
-    subjects = {}
-    objects = {}
-    objects_all = {}
-    predicate = {}
-    cnt = 0
-    for doc in db_results:
-        id = doc['id']
-        cnt += 1
-        if cnt > 6:
-            exit(0)
-        if cnt % 10000 == 0:
-            print cnt
-        img_path = db.image_data.find({"id": id})[0]['url'].replace('https://cs.stanford.edu/people/rak248/', '')
-        img_path = '/media/zawlin/ssd/data_vrd/vg/' + img_path
-        im = cv2.imread(img_path)
-        rcnt = 0
-        cv2.imwrite('/home/zawlin/hw/' + str(id) + '.jpg', im)
-        for r in doc['regions']:
-            rcnt += 1
-            imdraw = im.copy()
-            # c = (np.random.randint(40,255),np.random.randint(40,255),np.random.randint(40,255))
-            cv2.rectangle(imdraw, (r['x'], r['y']),
-                          (r['x'] + r['width'], r['y'] + r['height']), (0, 255, 0), 2)
-
-            cv2.rectangle(imdraw, (0, 0),
-                          (imdraw.shape[1], 20), (0, 0, 0), -1)
-            cv2.putText(imdraw, r['phrase'], (15, 15), cv2.FONT_HERSHEY_COMPLEX_SMALL, 1, (255, 255, 255), 2)
-
-            cv2.imwrite('/home/zawlin/hw/' + str(id) + '_' + str(rcnt) + '.jpg', imdraw)
-
-def vg_data_vis():
-    client = MongoClient("mongodb://localhost:27017")
-    db = client.visual_genome
-    db_results = db.relationships.find(no_cursor_timeout=True)
-
-    cnt = 0
-    start = time.time()
-    last = time.time()
-
-    subjects = {}
-    objects = {}
-    objects_all = {}
-    predicate = {}
-    cnt = 0
-    for doc in db_results:
-        id = doc['id']
-        cnt += 1
-        if cnt % 10000 == 0:
-            print cnt
-        img_path = db.image_data.find({"id": id})[0]['url'].replace('https://cs.stanford.edu/people/rak248/', '')
-        img_path = '/media/zawlin/ssd/data_vrd/vg/' + img_path
-        im = cv2.imread(img_path)
-        rcnt = 0
-        cv2.imwrite('/home/zawlin/hw/' + str(cnt) + '.jpg', im)
-        for r in doc['relationships']:
-            rcnt += 1
-            imdraw = im.copy()
-            # c = (np.random.randint(40,255),np.random.randint(40,255),np.random.randint(40,255))
-            cv2.rectangle(imdraw, (r['object']['x'], r['object']['y']),
-                          (r['object']['x'] + r['object']['w'], r['object']['y'] + r['object']['h']), (0, 255, 0), 2)
-            cv2.rectangle(imdraw, (r['subject']['x'], r['subject']['y']),
-                          (r['subject']['x'] + r['subject']['w'], r['subject']['y'] + r['subject']['h']), (0, 0, 255)
-                          , 2)
-            cv2.putText(imdraw, r['predicate'], (40, 40), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2)
-            cv2.putText(imdraw, r['object']['name'], (r['object']['x'] + 10, r['object']['y'] + 10),
-                        cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
-            cv2.putText(imdraw, r['subject']['name'], (r['subject']['x'] + 10, r['subject']['y'] + 10),
-                        cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
-
-            cv2.imwrite('/home/zawlin/hw/' + str(cnt) + '_' + str(rcnt) + '.jpg', imdraw)
-            if r['predicate'] not in predicate:
-                predicate[r['predicate']] = 1
-            else:
-                predicate[r['predicate']] += 1
-            if r['subject']['name'] not in subjects:
-                subjects[r['subject']['name']] = 1
-            else:
-                subjects[r['subject']['name']] += 1
-            if r['object']['name'] not in objects:
-                objects[r['object']['name']] = 1
-            else:
-                objects[r['object']['name']] += 1
-            if r['subject']['name'] not in objects_all:
-                objects_all[r['subject']['name']] = 1
-            else:
-                objects_all[r['subject']['name']] += 1
-            if r['object']['name'] not in objects_all:
-                objects_all[r['object']['name']] = 1
-            else:
-                objects_all[r['object']['name']] += 1
-            cv2.imshow('imdraw', imdraw)
-            cv2.waitKey(0)
-        cv2.imshow('im', im)
-        cv2.waitKey(0)
-
-    objects_all_sorted = sorted(objects_all.items(), key=operator.itemgetter(1))
-    objects_sorted = sorted(objects.items(), key=operator.itemgetter(1))
-    subjects_sorted = sorted(subjects.items(), key=operator.itemgetter(1))
-    predicate_sorted = sorted(predicate.items(), key=operator.itemgetter(1))
-    print predicate_sorted[:100]
-
 def vg_count_top():
     client = MongoClient("mongodb://localhost:27017")
     db = client.visual_genome_1_2
@@ -218,10 +108,10 @@ def vg_count_top():
                 objects_all[r['object']['name']] = 1
             else:
                 objects_all[r['object']['name']] += 1
-    zl.save('/home/zawlin/g/py-faster-rcnn/output/objects_all.pkl', objects_all)
-    zl.save('/home/zawlin/g/py-faster-rcnn/output/objects.pkl', objects)
-    zl.save('/home/zawlin/g/py-faster-rcnn/output/subjects.pkl', subjects)
-    zl.save('/home/zawlin/g/py-faster-rcnn/output/predicate.pkl', predicate)
+    zl.save('output/objects_all.pkl', objects_all)
+    zl.save('output/objects.pkl', objects)
+    zl.save('output/subjects.pkl', subjects)
+    zl.save('output/predicate.pkl', predicate)
     objects_all_sorted = sorted(objects_all.items(), key=operator.itemgetter(1))
     objects_sorted = sorted(objects.items(), key=operator.itemgetter(1))
     subjects_sorted = sorted(subjects.items(), key=operator.itemgetter(1))
@@ -292,10 +182,10 @@ def cannonicalize_relationship(text, wnl, spl):
         return "C_FAILED"
 
 def vg_data_prep2():
-    objects_all = zl.load('/home/zawlin/g/py-faster-rcnn/output/objects_all.pkl')
-    objects = zl.load('/home/zawlin/g/py-faster-rcnn/output/objects.pkl')
-    subjects = zl.load('/home/zawlin/g/py-faster-rcnn/output/subjects.pkl')
-    predicate = zl.load('/home/zawlin/g/py-faster-rcnn/output/predicate.pkl')
+    objects_all = zl.load('output/objects_all.pkl')
+    objects =     zl.load('output/objects.pkl')
+    subjects =    zl.load('output/subjects.pkl')
+    predicate =   zl.load('output/predicate.pkl')
 
     objects_all_sorted = sorted(objects_all.items(), key=operator.itemgetter(1), reverse=True)
     objects_sorted = sorted(objects.items(), key=operator.itemgetter(1), reverse=True)
@@ -310,10 +200,10 @@ def vg_data_prep2():
     #        print k
 
 def vg_choose_final_set():
-    objects_all = zl.load('/home/zawlin/g/py-faster-rcnn/output/objects_all.pkl')
-    objects = zl.load('/home/zawlin/g/py-faster-rcnn/output/objects.pkl')
-    subjects = zl.load('/home/zawlin/g/py-faster-rcnn/output/subjects.pkl')
-    predicate = zl.load('/home/zawlin/g/py-faster-rcnn/output/predicate.pkl')
+    objects_all = zl.load('output/objects_all.pkl')
+    objects =     zl.load('output/objects.pkl')
+    subjects =    zl.load('output/subjects.pkl')
+    predicate =   zl.load('output/predicate.pkl')
 
     objects_all_sorted = sorted(objects_all.items(), key=operator.itemgetter(1), reverse=True)
     objects_sorted = sorted(objects.items(), key=operator.itemgetter(1), reverse=True)
@@ -385,7 +275,7 @@ def vg_choose_final_set():
             db.relationships_objects_test.insert(doc_object)
 
 def make_mappings():
-    lines = [line.strip() for line in open('/media/zawlin/ssd/data_vrd/vg_1.2/objects.txt')]
+    lines = [line.strip() for line in open('data/vg_1.2/objects.txt')]
     obj_mappings = {}
     for l in lines:
         ls = [i.strip() for i in l.split(',') if i.strip() != '']
@@ -394,7 +284,7 @@ def make_mappings():
     return obj_mappings
 
 def make_p_mappings():
-    lines = [line.strip() for line in open('/media/zawlin/ssd/data_vrd/vg_1.2/vg_predicates.txt')]
+    lines = [line.strip() for line in open('data/vg_1.2/vg_predicates.txt')]
     p_mappings = {}
     for l in lines:
         if ':' in l:continue
@@ -470,8 +360,8 @@ def vg_make_voc_imageset(split_type):
     if split_type !='train' and split_type!='test':
         print 'error'
         exit(0)
-    vg_root = '/media/zawlin/ssd/data_vrd/vg_1.2/'
-    imageset_root= '/media/zawlin/ssd/data_vrd/vg_1.2/voc_format/ImageSets/'+split_type+'.txt'
+    vg_root = 'data/vg_1.2/'
+    imageset_root= 'data/vg_1.2/voc_format/ImageSets/'+split_type+'.txt'
     cnt = 1
     # preload image data
     imdatas = {}
@@ -518,7 +408,7 @@ def vg_make_voc_imageset(split_type):
     output.close()
 
     if split_type=='train':
-        imageset_root= '/media/zawlin/ssd/data_vrd/vg_1.2/voc_format/ImageSets/mini.txt'
+        imageset_root= 'data/vg_1.2/voc_format/ImageSets/mini.txt'
         cnt = 1
         imageset_content=''
         for k in mini_selection.keys():
@@ -533,9 +423,9 @@ def vg_make_voc_format(split_type):
     if split_type !='train' and split_type!='test':
         print 'error'
         exit(0)
-    vg_root = '/media/zawlin/ssd/data_vrd/vg_1.2/'
-    anno_root= '/media/zawlin/ssd/data_vrd/vg_1.2/voc_format/Annotations/'+split_type+'/'
-    data_root= '/media/zawlin/ssd/data_vrd/vg_1.2/voc_format/Data/'+split_type+'/'
+    vg_root =  'data/vg_1.2/'
+    anno_root= 'data/vg_1.2/voc_format/Annotations/'+split_type+'/'
+    data_root= 'data/vg_1.2/voc_format/Data/'+split_type+'/'
 
     zl.make_dirs(anno_root+'VG_100K_2')
     zl.make_dirs(anno_root+'VG_100K')
@@ -588,7 +478,7 @@ def vg_make_voc_format(split_type):
     print 'images with annotation=%d\n'%cnt
 
 def pre_output():
-    h5f = '/home/zawlin/Dropbox/proj/sg_vrd_meta.h5'
+    h5f = 'data/sg_vrd_meta.h5'
     h5f = h5py.File(h5f)
     for k in  h5f['meta/pre/name2idx'].keys():
         print k+(',spatial' if len(h5f['meta/pre/name2idx/'+k].attrs)>0 else ',')
@@ -712,9 +602,9 @@ def vg_check_obj_stats():
     print zl.sort_dict_by_val(test_stats)
 
 def vg_make_meta_visual_phrase():
-    m = h5py.File('/home/zawlin/Dropbox/proj/vg1_2_meta.h5','r',driver='core')
+    m = h5py.File('data/vg1_2_meta.h5','r',driver='core')
 
-    h5f  = h5py.File('/home/zawlin/Dropbox/proj/vg1_2_vp_meta.h5')
+    h5f  = h5py.File('data/vg1_2_vp_meta.h5')
 
     triplets = {}
     cnt = 0
@@ -759,8 +649,8 @@ def vg_make_meta_visual_phrase():
     print len(triplets_ok)
 
 def vg_make_meta_gt_visual_phrase():
-    m = h5py.File('/home/zawlin/Dropbox/proj/vg1_2_meta.h5','r',driver='core')
-    h5f  = h5py.File('/home/zawlin/Dropbox/proj/vg1_2_vp_meta.h5')
+    m = h5py.File('data/vg1_2_meta.h5','r',driver='core')
+    h5f  = h5py.File('data/vg1_2_vp_meta.h5')
 
     triplets = {}
     cnt = 0
@@ -809,7 +699,7 @@ def vg_make_meta_hdf():
     for i in range(len(pre_names_sorted)):
         predicates += (pre_names_sorted[i],)
 
-    h5f = '/home/zawlin/Dropbox/proj/vg1_2_meta.h5'
+    h5f = 'data/vg1_2_meta.h5'
     h5f = h5py.File(h5f)
     for i in range(201):
         h5f['meta/cls/name2idx/'+classes[i]] = str(i)
@@ -851,7 +741,7 @@ def vg_db_stats():
             test_stats[name] += 1
 
 def vr_count_only_one_triplet():
-    m = h5py.File('/media/zawlin/ssd/Dropbox/proj/sg_vrd_meta.h5')
+    m = h5py.File('data/sg_vrd_meta.h5')
     triplets = {}
     for k in m['gt/train/'].keys():
         rlp_labels = m['gt/train/'+k+'/rlp_labels']
@@ -1043,7 +933,7 @@ def vg_count_only_one_triplet():
     vg_total_annotation_count(spo_list)
 
 def relation_make_meta_add_imid2path():
-    m = h5py.File('/home/zawlin/Dropbox/proj/vg1_2_meta.h5')
+    m = h5py.File('data/vg1_2_meta.h5')
 
     client = MongoClient("mongodb://localhost:27017")
     db = client.visual_genome_1_2
@@ -1086,7 +976,7 @@ def relation_make_meta():
         imid =imdata['image_id']
         imdatas[imid] = imdata
     db_results_train = db.relationships_all_train.find(no_cursor_timeout=True)
-    m = h5py.File('/home/zawlin/Dropbox/proj/vg1_2_meta.h5')
+    m = h5py.File('data/vg1_2_meta.h5')
     cnt = 0
     for doc in db_results_train:
         if cnt %1000 ==0:
@@ -1163,38 +1053,14 @@ def relation_make_meta():
         m.create_dataset('gt/test/%s/sub_boxes'%imid,data=np.array(sub_boxes).astype(np.int16))
         m.create_dataset('gt/test/%s/obj_boxes'%imid,data=np.array(obj_boxes).astype(np.int16))
 
-def remove_empty_from_metadata():
-    m = h5py.File('/home/zawlin/Dropbox/proj/vg1_2_meta (3rd copy).h5')
-    del_cnt =0
-    cnt = 0
-    # print len(m['gt/train'].keys())
-    # exit(0)
-    for k in m['gt/test'].keys():
-        if cnt%1000==0:
-            print cnt
-        cnt +=1
-        rlp_labels = m['gt/test/%s/sub_boxes'%k][...]
-        if rlp_labels.shape[0]==0:
-            del m['gt/test/%s'%k]
-            del_cnt+=1
-
-    for k in m['gt/train'].keys():
-        if cnt%1000==0:
-            print cnt
-        cnt +=1
-        rlp_labels = m['gt/train/%s/sub_boxes'%k][...]
-        if rlp_labels.shape[0]==0:
-            del m['gt/train/%s'%k]
-            del_cnt+=1
-
 def vg_vphrase_make_voc_format(split_type):
     if split_type !='train' and split_type!='test':
         print 'error'
         exit(0)
-    m = h5py.File('/home/zawlin/Dropbox/proj/vg1_2_meta.h5')
-    m_vp = h5py.File('/home/zawlin/Dropbox/proj/vg1_2_vp_meta.h5')
-    vg_root = '/media/zawlin/ssd/data_vrd/vg_1.2/'
-    root = '/media/zawlin/ssd/data_vrd/vg_1.2/voc_format_vp/'
+    m = h5py.File('data/vg1_2_meta.h5')
+    m_vp = h5py.File('data/vg1_2_vp_meta.h5')
+    vg_root = 'data/vg_1.2/'
+    root = 'data/vg_1.2/voc_format_vp/'
     anno_root= root+'Annotations/'+split_type+'/'
     data_root= root+'Data/'+split_type+'/'
     zl.make_dirs(anno_root+'VG_100K_2')
@@ -1256,13 +1122,13 @@ def vg_vphrase_make_voc_format(split_type):
     print 'images with annotation=%d\n'%cnt
 
 def vg_vphrase_make_imagesets():
-    imageset_root= '/media/zawlin/ssd/data_vrd/vg_1.2/voc_format_vp/ImageSets/train.txt'
-    m = h5py.File('/home/zawlin/Dropbox/proj/vg1_2_meta.h5')
+    imageset_root= 'data/vg_1.2/voc_format_vp/ImageSets/train.txt'
+    m = h5py.File('data/vg1_2_meta.h5')
     imid2path = {}
     for k in m['meta/imid2path'].keys():
         imid2path[k] = str(m['meta/imid2path/%s'%k][...])
     m.close()
-    m = h5py.File('/home/zawlin/Dropbox/proj/vg1_2_vp_meta.h5')
+    m = h5py.File('data/vg1_2_vp_meta.h5')
     out = open(imageset_root,'w')
     cnt = 1
     for k in m['gt/train'].keys():
@@ -1272,7 +1138,7 @@ def vg_vphrase_make_imagesets():
 def vg_make_meta_for_obj_evaluation():
     from numpy.core.records import fromarrays
     from scipy.io import savemat
-    m = h5py.File('/home/zawlin/Dropbox/proj/vg1_2_meta.h5')
+    m = h5py.File('data/vg1_2_meta.h5')
     VG1_2_ID = []
     WNID = []
     name = []
@@ -1284,12 +1150,12 @@ def vg_make_meta_for_obj_evaluation():
         name.append(n)
         description.append(n)
     meta_synset = fromarrays([VG1_2_ID,WNID,name,description], names=['VG1_2_ID', 'WNID', 'name', 'description'])
-    savemat('/home/zawlin/Dropbox/proj/vg1_2_meta.mat', {'synsets': meta_synset})
+    savemat('data/vg1_2_meta.mat', {'synsets': meta_synset})
 
 def vg_make_relation_gt_for_evaluation():
     from numpy.core.records import fromarrays
     from scipy.io import savemat
-    h5f = h5py.File('/home/zawlin/Dropbox/proj/vg1_2_meta.h5')
+    h5f = h5py.File('data/vg1_2_meta.h5')
     cnt = 1
     gt_obj_bboxes = []
     gt_sub_bboxes = []
@@ -1315,13 +1181,13 @@ def vg_make_relation_gt_for_evaluation():
         gt_rlp_labels.append(rlp_labels)
         imagePath.append(imid2path[k])
     # print ccnt
-    savemat('/home/zawlin/Dropbox/proj/vg_gt.mat',{'gt_obj_bboxes':np.array(gt_obj_bboxes),'gt_sub_bboxes':np.array(gt_sub_bboxes),'gt_rlp_labels':np.array(gt_rlp_labels),'imagePath':np.array(imagePath,dtype=np.object)})
+    savemat('data/vg_gt.mat',{'gt_obj_bboxes':np.array(gt_obj_bboxes),'gt_sub_bboxes':np.array(gt_sub_bboxes),'gt_rlp_labels':np.array(gt_rlp_labels),'imagePath':np.array(imagePath,dtype=np.object)})
 
 def vg_meta_add_predicate_types():
-    h5f = '/home/zawlin/Dropbox/proj/vg1_2_meta.h5'
+    h5f = 'data/vg1_2_meta.h5'
     h5f = h5py.File(h5f)
 
-    lines = [line.strip() for line in open('/media/zawlin/ssd/Dropbox/cvpr17/_relation_mappings/vg_predicates_for_processing.txt')]
+    lines = [line.strip() for line in open('data/vg_1.2/vg_predicates_for_processing.txt')]
     type_mappings={}
     for l in lines:
         ls = [i.strip() for i in l.split(',') if i.strip() != '']
@@ -1332,7 +1198,7 @@ def vg_meta_add_predicate_types():
 
 
 def vg_generate_type_idx():
-    h5f = '/home/zawlin/Dropbox/proj/vg1_2_meta.h5'
+    h5f = 'data/vg1_2_meta.h5'
     h5f = h5py.File(h5f)
     v = []
     p =[]
@@ -1353,10 +1219,10 @@ def vg_generate_type_idx():
     print 'c= ' +str(c)
 
 def vg_vp_meta_add_predicate_types():
-    h5f = '/home/zawlin/Dropbox/proj/vg1_2_vp_meta.h5'
+    h5f = 'data/vg1_2_vp_meta.h5'
     h5f = h5py.File(h5f)
 
-    lines = [line.strip() for line in open('/home/zawlin/Dropbox/cvpr17/_relation_mappings/vg_predicates_for_processing.txt')]
+    lines = [line.strip() for line in open('data/vg_1.2/vg_predicates_for_processing.txt')]
     type_mappings={}
     for l in lines:
         ls = [i.strip() for i in l.split(',') if i.strip() != '']
@@ -1378,7 +1244,7 @@ def vg_vp_meta_add_predicate_types():
             print pre_orig
             exit(0)
 def check_c_type_img_in_train():
-    h5f = '/home/zawlin/Dropbox/proj/vg1_2_meta.h5'
+    h5f = 'data/vg1_2_meta.h5'
     h5f = h5py.File(h5f)
     for k in h5f['meta/pre/name2idx/']:
         if k !='__background__':
@@ -1402,7 +1268,7 @@ def check_c_type_img_in_train():
             # print k
 
 def check_imid():
-    m = h5py.File('/home/zawlin/Dropbox/proj/vg1_2_meta.h5')
+    m = h5py.File('data/vg1_2_meta.h5')
     for k in m['meta/imid2path'].keys():
         impath = str(m['meta/imid2path/%s'%k][...])
         impath = impath.split('/')[1].replace('.jpg','')
@@ -1411,12 +1277,12 @@ def check_imid():
     pass
 
 def gen_vg_predicates():
-    m = h5py.File('/home/zawlin/Dropbox/proj/vg1_2_meta.h5')
+    m = h5py.File('data/vg1_2_meta.h5')
     for k in m['meta/pre/name2idx']:
         print k,',',m['meta/pre/name2idx'][k].attrs['type']
 
 def gen_vr_predicates():
-    m = h5py.File('/home/zawlin/Dropbox/proj/sg_vrd_meta.h5')
+    m = h5py.File('data/sg_vrd_meta.h5')
     for k in m['meta/cls/name2idx']:
         print k
 # vg_make_voc_imageset('train')

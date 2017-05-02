@@ -1,8 +1,3 @@
-# --------------------------------------------------------
-# Fast R-CNN for ILSVRC VIDEO DETECTION
-# zawlin
-# --------------------------------------------------------
-
 import datasets
 import datasets.pascal_voc
 import os

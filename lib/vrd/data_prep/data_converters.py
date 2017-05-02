@@ -29,9 +29,9 @@ from numpy import linalg as LA
 import operator
 
 def convert_vr_gt_to_hdf5():
-    m = h5py.File('/media/zawlin/ssd/Dropbox/proj/sg_vrd_meta_gt.h5')
+    m = h5py.File('data/sg_vrd_meta_gt.h5')
 
-    rdata = sio.loadmat('/media/zawlin/ssd/data_vrd/vrd/annotation_test.mat', struct_as_record=False,squeeze_me=True)
+    rdata = sio.loadmat('data/sg_vrd_2016/devkit/annotation_test.mat', struct_as_record=False,squeeze_me=True)
     # map im_id to annotation
     r_annos = {}
     for i in xrange(len(rdata['annotation_test'])):
@@ -69,7 +69,7 @@ def convert_vr_gt_to_hdf5():
         m.create_dataset('gt/test/%s/rlp_labels'%imid,data = np.array(rlp_labels))
 
 
-    rdata = sio.loadmat('/media/zawlin/ssd/data_vrd/vrd/annotation_train.mat', struct_as_record=False,squeeze_me=True)
+    rdata = sio.loadmat('data/sg_vrd_2016/devkit/annotation_train.mat', struct_as_record=False,squeeze_me=True)
     # map im_id to annotation
     r_annos = {}
     for i in xrange(len(rdata['annotation_train'])):
@@ -106,7 +106,7 @@ def convert_vr_gt_to_hdf5():
 
 def convert_result_mat_to_hdf5():
     data = sio.loadmat('output/results/relationship_det_result.mat', struct_as_record=False, squeeze_me=True)
-    m = h5py.File('/media/zawlin/ssd/Dropbox/proj/sg_vrd_meta.h5')
+    m = h5py.File('data/sg_vrd_meta.h5')
     result = h5py.File('output/results/lu_visual_method_results.hdf5')
     rlp_confs=[]
     rlp_labels=[]
@@ -129,14 +129,5 @@ def convert_result_mat_to_hdf5():
         result.create_dataset(imid+'/rlp_labels',dtype='float16', data=np.array(rlp_labels_ours).astype(np.float16))
 
 
-def convert_sg_vrd_meta_to_voc_eval():
-    dst = '/media/zawlin/ssd/data_vrd/vrd/sg/devkit/data'
-    m = h5py.File('/media/zawlin/ssd/Dropbox/proj/sg_vrd_meta.h5')
-    for i in m['gt/test/'].keys():
-        print i
-        pass
-    pass
-#convert_vr_gt_to_hdf5()
 convert_result_mat_to_hdf5()
-#convert_sg_vrd_meta_to_voc_eval()
 

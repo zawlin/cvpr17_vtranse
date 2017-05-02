@@ -14,6 +14,9 @@ def add_path(path):
     if path not in sys.path:
         sys.path.insert(0, path)
 
-add_path('/home/zawlin/g/py-faster-rcnn/caffe-fast-rcnn/python')
-add_path('/home/zawlin/g/py-faster-rcnn/lib')
+this_dir = osp.dirname(__file__)
+caffe_path = osp.join(this_dir,'..','caffe-fast-rcnn','python')
+add_path(caffe_path)
 
+lib_path = osp.join(this_dir,'..','lib')
+add_path(lib_path)

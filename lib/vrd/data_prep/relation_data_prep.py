@@ -6,11 +6,11 @@ import scipy.io as sio
 from dict2xml import dict2xml
 import utils.zl_utils as zl
 import h5py
-data_root = "/media/zawlin/ssd/data_vrd/vrd/sg/Data"
-anno_root = "/media/zawlin/ssd/data_vrd/vrd/sg/Annotations"
+data_root = "data/sg_vrd_2016/Data"
+anno_root = "data/sg_vrd_2016/Annotations"
 
 def prep_test():
-    data = sio.loadmat('/media/zawlin/ssd/data_vrd/vrd/annotation_test.mat', struct_as_record=False, squeeze_me=True)
+    data = sio.loadmat('data/sg_vrd_2016/devkit/annotation_test.mat', struct_as_record=False, squeeze_me=True)
     cnt=0
     for i in xrange(len(data['annotation_test'])):
         if i%100==0:
@@ -59,7 +59,7 @@ def prep_test():
     print 'images with annotation=%d\n'%cnt
 
 def count_taller_occurrence():
-    data = sio.loadmat('/media/zawlin/ssd/data_vrd/vrd/annotation_train.mat', struct_as_record=False, squeeze_me=True)
+    data = sio.loadmat('data/sg_vrd_2016/devkit/annotation_train.mat', struct_as_record=False, squeeze_me=True)
     cnt=0
     taller_cnt =0
     for i in xrange(len(data['annotation_train'])):
@@ -81,7 +81,7 @@ def count_taller_occurrence():
     print 'taller cnt =%d\n'%taller_cnt
 
 def prep_train():
-    data = sio.loadmat('/media/zawlin/ssd/data_vrd/vrd/annotation_train.mat', struct_as_record=False, squeeze_me=True)
+    data = sio.loadmat('data/sg_vrd_2016/devkit/annotation_train.mat', struct_as_record=False, squeeze_me=True)
     cnt=0
     taller_cnt =0
     for i in xrange(len(data['annotation_train'])):
@@ -137,7 +137,7 @@ def prep_train():
     print 'taller cnt =%d\n'%taller_cnt
 
 def prep_train_data_only():
-    data = sio.loadmat('/media/zawlin/ssd/data_vrd/vrd/annotation_train.mat', struct_as_record=False, squeeze_me=True)
+    data = sio.loadmat('data/sg_vrd_2016/devkit/annotation_train.mat', struct_as_record=False, squeeze_me=True)
     cnt=0
     for i in xrange(len(data['annotation_train'])):
         if i%100==0:
@@ -168,8 +168,8 @@ def prep_train_data_only():
 
 def gen_image_sets():
 
-    root = '/home/zawlin/g/py-faster-rcnn/data/sg_vrd_2016/Annotations/sg_train_images'
-    f = open('/home/zawlin/g/py-faster-rcnn/data/sg_vrd_2016/ImageSets/train.txt','w')
+    root = 'data/sg_vrd_2016/Annotations/sg_train_images'
+    f = open('data/sg_vrd_2016/ImageSets/train.txt','w')
     cnt = 0
     for path, subdirs, files in os.walk(root):
         for name in files:
@@ -178,8 +178,8 @@ def gen_image_sets():
     f.close()
 
 
-    root = '/home/zawlin/g/py-faster-rcnn/data/sg_vrd_2016/Annotations/sg_test_images'
-    f = open('/home/zawlin/g/py-faster-rcnn/data/sg_vrd_2016/ImageSets/test.txt','w')
+    root = 'data/sg_vrd_2016/Annotations/sg_test_images'
+    f = open('data/sg_vrd_2016/ImageSets/test.txt','w')
     cnt=0
     for path, subdirs, files in os.walk(root):
         for name in files:
@@ -187,54 +187,24 @@ def gen_image_sets():
             f.write('%s %d\n'%(name[:name.rfind('.')],cnt))
     f.close()
 
-def ilsvrc_meta():
-    synsets = sio.loadmat('/media/zawlin/hydra/mnt/disk_05/zawlin/data/ILSVRC/devkit/data/meta_vid.mat')
-
-    synsets = synsets['synsets'].squeeze()
-    name2id ={}
-    id2name={}
-    idx2name={}
-    idx2name['0']='__background__'
-    name2idx={}
-    name2idx['__background__']='0'
-    for i in range(30):
-        idx2name[str(i+1)]=str(synsets[i][2][0])
-        name2idx[str(synsets[i][2][0])]=str(i+1)
-        name2id[str(synsets[i][2][0])] = str(synsets[i][1][0])
-        id2name[str(synsets[i][1][0])] = str(synsets[i][2][0])
-
-    lines = [line.strip() for line in open('/home/zawlin/data/ILSVRC/ImageSets/VID/val.txt')]
-    h5f = '/home/zawlin/Dropbox/proj/ilsvrc_meta.h5'
-    h5f = h5py.File(h5f)
-    for k in name2id.keys():
-        h5f['meta/name2id/'+k]=np.string_(name2id[k])
-    for k in idx2name.keys():
-        h5f['meta/idx2name/'+k]=np.string_(idx2name[k])
-    for k in id2name.keys():
-        h5f['meta/id2name/'+k]=np.string_(id2name[k])
-    for k in name2idx.keys():
-        h5f['meta/name2idx/'+k]=np.string_(name2idx[k])
-
-    for l in lines:
-        s = l.split(' ')
-        h5f['db/val/'+s[0]]=np.string_(s[1])
 
 def vrd_meta():
 
-    objectListN = sio.loadmat(os.path.join('/media/zawlin/ssd/data_vrd/vrd/', 'objectListN.mat'))
+    objectListN = sio.loadmat('data/sg_vrd_2016/devkit/objectListN.mat')
+
     objectListN = objectListN['objectListN'].squeeze()
 
     classes = ('__background__',)  # always index 0
     for i in range(100):
         classes += (str(objectListN[i][0]),)
-    h5f = '/home/zawlin/Dropbox/proj/sg_vrd_meta.h5'
+    h5f = 'data/sg_vrd_meta.h5'
     h5f = h5py.File(h5f)
     for i in range(101):
         h5f['meta/cls/name2idx/'+classes[i]] = str(i)
         h5f['meta/cls/idx2name/'+str(i)] = classes[i]
 
 
-    predicate = sio.loadmat(os.path.join('/media/zawlin/ssd/data_vrd/vrd/', 'predicate.mat'))
+    predicate = sio.loadmat('data/sg_vrd_2016/devkit/predicate.mat')
     predicate = predicate['predicate'].squeeze()
 
     predicates=()
@@ -244,7 +214,7 @@ def vrd_meta():
     for i in range(70):
         h5f['meta/pre/name2idx/'+predicates[i]] = str(i)
         h5f['meta/pre/idx2name/'+str(i)] = predicates[i]
-    root = '/media/zawlin/ssd/data_vrd/vrd/sg/Data/sg_train_images'
+    root = 'data/sg_vrd_2016/Data/sg_train_images'
 
     for path, subdirs, files in os.walk(root):
         for name in files:
@@ -255,10 +225,10 @@ def vrd_meta():
             h5f['train/'+im_id+'/w']=im.shape[1]
 
 def vrd_meta_add_predicate_types():
-    h5f = '/home/zawlin/Dropbox/proj/sg_vrd_meta.h5'
+    h5f = 'data/sg_vrd_meta.h5'
     h5f = h5py.File(h5f)
 
-    lines = [line.strip() for line in open('/media/zawlin/ssd/Dropbox/cvpr17/_relation_mappings/vrd_predicates.txt')]
+    lines = [line.strip() for line in open('data/vrd_predicates.txt')]
     type_mappings={}
     for l in lines:
         ls = [i.strip() for i in l.split(',') if i.strip() != '']
@@ -268,7 +238,7 @@ def vrd_meta_add_predicate_types():
         h5f['meta/pre/name2idx/'+k].attrs['type']=type_mappings[k]
 
 def vrd_generate_type_idx():
-    h5f = '/home/zawlin/Dropbox/proj/sg_vrd_meta.h5'
+    h5f = 'data/sg_vrd_meta.h5'
     h5f = h5py.File(h5f)
     v = []
     p =[]
@@ -319,8 +289,8 @@ def add_maxbox():
         vgg_data.create_dataset(im_id + '/max_boxes',dtype='short', data=max_boxes.astype(np.short))
         #max_boxes.reshape((-1,4))
 def vr_make_meta_visual_phrase():
-    m = h5py.File('/home/zawlin/Dropbox/proj/sg_vrd_meta.h5','r',driver='core')
-    h5f  = h5py.File('/home/zawlin/Dropbox/proj/sg_vrd_vp_meta.h5')
+    m = h5py.File('data/sg_vrd_meta.h5','r',driver='core')
+    h5f  = h5py.File('data/sg_vrd_vp_meta.h5')
 
     triplets = {}
     cnt = 0
@@ -361,8 +331,8 @@ def vr_make_meta_visual_phrase():
     print len(triplets_ok)
 
 def vr_make_meta_gt_visual_phrase():
-    m = h5py.File('/home/zawlin/Dropbox/proj/sg_vrd_meta.h5','r',driver='core')
-    h5f  = h5py.File('/home/zawlin/Dropbox/proj/sg_vrd_vp_meta.h5')
+    m = h5py.File('data/sg_vrd_meta.h5','r',driver='core')
+    h5f  = h5py.File('data/sg_vrd_vp_meta.h5')
 
     triplets = {}
     cnt = 0
@@ -397,9 +367,9 @@ def vr_vphrase_make_voc_format(split_type):
     if split_type !='train' and split_type!='test':
         print 'error'
         exit(0)
-    m = h5py.File('/home/zawlin/Dropbox/proj/sg_vrd_meta.h5')
-    m_vp = h5py.File('/home/zawlin/Dropbox/proj/sg_vrd_vphrase_meta.h5')
-    root = '/home/zawlin/data/data_vrd/vrd/sg_vp/'
+    m = h5py.File('data/sg_vrd_meta.h5')
+    m_vp = h5py.File('data/sg_vrd_vphrase_meta.h5')
+    root = 'data/sg_vrd_2016_vp/'
     anno_root= root+'Annotations/'+split_type+'/'
     data_root= root+'Data/'+split_type+'/'
     zl.make_dirs(anno_root)
@@ -411,14 +381,6 @@ def vr_vphrase_make_voc_format(split_type):
             print cnt,zl.tock()
             zl.tick()
         cnt+=1
-        # todo for vg
-        # im_data= db.image_data.find_one({'image_id':imid})
-        # im_path_full = im_data['url'].replace('https://cs.stanford.edu/people/rak248/','')
-        # im_path_folder = im_path_full.split('/')[0]
-        # im_path_file = im_path_full.split('/')[1]
-        # im_src_path = vr_root+'%s/%s'%(im_path_folder,im_path_file)
-        # im_dst_path = data_root+'%s/%s'%(im_path_folder,im_path_file)
-        # zl.copy_file(im_src_path,im_dst_path)
         voc_datum = {"folder": '',
                      "source": {"database":"sg vrd visual phrase"},
                      "filename":k+'.jpg'
@@ -452,7 +414,7 @@ def vr_vphrase_make_voc_format(split_type):
 def vr_make_meta_for_obj_evaluation():
     from numpy.core.records import fromarrays
     from scipy.io import savemat
-    m = h5py.File('/home/zawlin/Dropbox/proj/sg_vrd_meta.h5')
+    m = h5py.File('data/sg_vrd_meta.h5')
     SG_VRD_ID = []
     WNID = []
     name = []
@@ -464,19 +426,6 @@ def vr_make_meta_for_obj_evaluation():
         name.append(n)
         description.append(n)
     meta_synset = fromarrays([SG_VRD_ID,WNID,name,description], names=['SG_VRD_ID', 'WNID', 'name', 'description'])
-    savemat('/home/zawlin/Dropbox/proj/sg_vrd_meta.mat', {'synsets': meta_synset})
+    savemat('data/sg_vrd_meta.mat', {'synsets': meta_synset})
 
 vr_make_meta_for_obj_evaluation()
-#add_maxbox()
-#count_taller_occurrence()
-#prep_test_data()
-#vrd_meta()
-#prep_train()
-#prep_test()
-#vrd_meta_add_predicate_types()
-#vrd_generate_type_idx()
-#prep_train_data_only()
-#gen_image_sets()
-# vr_make_meta_visual_phrase()
-# vr_make_meta_gt_visual_phrase()
-#vr_vphrase_make_voc_format('train')

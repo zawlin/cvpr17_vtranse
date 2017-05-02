@@ -1,8 +1,3 @@
-# --------------------------------------------------------
-# Fast R-CNN for ILSVRC VIDEO DETECTION
-# zawlin
-# --------------------------------------------------------
-
 import datasets
 import datasets.pascal_voc
 import os
@@ -39,7 +34,7 @@ class vg1_2(imdb):
         self._classes = ()  # always index 0
         self._class_name = ()  # always index 0
         self._class_ids = ()  # always index 0
-        self.m = h5py.File('/home/zawlin/Dropbox/proj/vg1_2_meta.h5','r','core')
+        self.m = h5py.File('data/vg1_2_meta.h5','r','core')
         for i in range(201):
             self._classes += (str(self.m['meta/cls/idx2name/'+str(i)][...]),)
             self._class_name += (str(self.m['meta/cls/idx2name/'+str(i)][...]),)

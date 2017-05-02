@@ -58,8 +58,8 @@ def run_relation(model_type,iteration):
     result = h5py.File('output/sg_vrd_2016_result_'+model_type+'_'+iteration+'.hdf5')
     #if os.path.exists('output/sg_vrd_2016_result.hdf5'):
     #    os.remove('output/sg_vrd_2016_result.hdf5')
-    m = h5py.File('/media/zawlin/ssd/Dropbox/proj/sg_vrd_meta.h5')
-    data_root='/home/zawlin/g/py-faster-rcnn/data/sg_vrd_2016/Data/sg_test_images/'
+    m = h5py.File('data/sg_vrd_meta.h5')
+    data_root='data/sg_vrd_2016/Data/sg_test_images/'
     keep = 100
     thresh = 0.0001
     net = caffe.Net('models/sg_vrd/relation/test_'+model_type+'.prototxt','output/relation/vr/sg_vrd_relation_vgg16_'+model_type+'_iter_'+iteration+'.caffemodel',caffe.TEST)
@@ -240,8 +240,8 @@ def run_relation_diff(model_type,iteration):
     result = h5py.File('output/sg_vrd_2016_result_'+model_type+'_'+iteration+'.hdf5')
     #if os.path.exists('output/sg_vrd_2016_result.hdf5'):
     #    os.remove('output/sg_vrd_2016_result.hdf5')
-    m = h5py.File('/media/zawlin/ssd/Dropbox/proj/sg_vrd_meta.h5')
-    data_root='/home/zawlin/g/py-faster-rcnn/data/sg_vrd_2016/Data/sg_test_images/'
+    m = h5py.File('data/sg_vrd_meta.h5')
+    data_root='data/sg_vrd_2016/Data/sg_test_images/'
     keep = 100
     thresh = 0.0001
     net = caffe.Net('models/sg_vrd/relation/test_'+model_type+'.prototxt','output/relation/sg_vrd_relation_vgg16_'+model_type+'_iter_'+iteration+'.caffemodel',caffe.TEST)
@@ -349,14 +349,14 @@ def run_relation_diff(model_type,iteration):
         result.create_dataset(imid+'/rlp_labels',dtype='float16', data=np.array(rlp_labels).astype(np.float16))
 
 def make_meta():
-    data = sio.loadmat('/home/zawlin/g/Visual-Relationship-Detection/data/imagePath.mat', struct_as_record=False, squeeze_me=True)
-    m = h5py.File('/media/zawlin/ssd/Dropbox/proj/sg_vrd_meta.h5')
+    data = sio.loadmat('data/sg_vrd_2016/devkit/imagePath.mat', struct_as_record=False, squeeze_me=True)
+    m = h5py.File('data//sg_vrd_meta.h5')
     for i in xrange(len(data['imagePath'])):
         m['db/testidx/'+str(i)]=data['imagePath'][i].split('.')[0]
     pass
 
 def make_relation_result(model_type,iteration):
-    m = h5py.File('/media/zawlin/ssd/Dropbox/proj/sg_vrd_meta.h5')
+    m = h5py.File('data/sg_vrd_meta.h5')
     result_str = 'sg_vrd_2016_result_'+model_type+'_'+iteration
     result = h5py.File('output/'+result_str+'.hdf5')
     rlp_confs=[]

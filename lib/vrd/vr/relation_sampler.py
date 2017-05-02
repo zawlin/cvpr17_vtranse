@@ -58,7 +58,7 @@ def visualize(im_data, boxes_tosort, rpn_boxes, m,thresh_final):
 
 class RelationSampler(caffe.Layer):
     def setup(self, bottom, top):
-        self.rdata = sio.loadmat('/media/zawlin/ssd/data_vrd/vrd/annotation_train.mat', struct_as_record=False,
+        self.rdata = sio.loadmat('data/sg_vrd_2016/devkit/annotation_train.mat', struct_as_record=False,
                                  squeeze_me=True)
         # map im_id to annotation
         self.r_anno = {}
@@ -67,14 +67,14 @@ class RelationSampler(caffe.Layer):
             im_id = anno.filename.split('.')[0]
             self.r_anno[im_id] = anno
 
-        self.meta = h5py.File('/home/zawlin/Dropbox/proj/sg_vrd_meta.h5', 'r', 'core')
+        self.meta = h5py.File('data/sg_vrd_meta.h5', 'r', 'core')
         layer_params = yaml.load(self.param_str_)
 
         self._batch_size = 1
         self.train_data = []
         self._name_to_top_map = {}
         # just hard code it for now
-        lines = [line.strip() for line in open('/home/zawlin/g/py-faster-rcnn/data/sg_vrd_2016/ImageSets/train.txt')]
+        lines = [line.strip() for line in open('data/sg_vrd_2016/ImageSets/train.txt')]
         self._image_id = {int(l.split(' ')[1]): l.split(' ')[0] for l in lines}
 
         # data blob: holds a batch of N images, each with 3 channels
