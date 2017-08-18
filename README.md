@@ -7,7 +7,7 @@ This implements "Visual Translation Embedding Network for Visual Relation Detect
 * evaluation code for vg+vrd adapted from Lu (https://github.com/Prof-Lu-Cewu/Visual-Relationship-Detection)
 
 #### Download links
-* annotations in hdf5 format
+* annotations in hdf5 format(Since quite a few have asked, for vrd, this is the same as the original mat-based data format. For vg, this is our own cleaned up set with 200 object categories and 100 predicates. The data is organized into train and test split for both datasets). If you come here for the dataset, this is the one.
     * https://www.dropbox.com/s/tae51mr75nd9qft/sg_vrd_meta.h5?dl=0
     * https://www.dropbox.com/s/ujd4247m2tduuj2/vg1_2_meta.h5?dl=0
 * voc format for obj detector
