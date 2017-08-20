@@ -3,7 +3,6 @@ import cv2
 import numpy as np
 import caffe
 import os
-import cifar.layer
 
 from caffe.proto import caffe_pb2
 from caffe.io import blobproto_to_array
@@ -15,8 +14,7 @@ def start_train():
     ### load the solver and create train and test nets
     solver = None
 
-    #solver = caffe.SGDSolver('models/sg_vrd/relation/solver.prototxt')
-    solver = caffe.SGDSolver('models/sg_vrd/relation/solver_pre_concat.prototxt')
+    solver = caffe.SGDSolver('models/vrd/relation/solver_all.prototxt')
 
     niter = 1000000
     test_interval = 25

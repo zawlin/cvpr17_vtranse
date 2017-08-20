@@ -1,4 +1,4 @@
-train_net: "models/sg_vrd/relation/train_all.prototxt"
+train_net: "models/vrd/relation/train_all.prototxt"
 base_lr: 0.01
 lr_policy: "step"
 gamma: 0.1

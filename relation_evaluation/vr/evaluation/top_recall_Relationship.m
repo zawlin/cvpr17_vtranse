@@ -63,9 +63,9 @@ for i=1:num_imgs
     gt_detected = zeros(1,num_gt_tuple);
    
     labels = tuple_labels_cell{i};
-%     if ~isempty(labels)
-%         labels(:,2) = labels(:,2)+1;
-%     end
+    if ~isempty(labels)
+        labels(:,2) = labels(:,2)+1;
+    end
     boxObj = obj_bboxes_cell{i};
     boxSub = sub_bboxes_cell{i};
 

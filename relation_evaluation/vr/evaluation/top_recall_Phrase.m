@@ -71,9 +71,9 @@ for i=1:num_imgs
    
     labels = tuple_labels_cell{i};
     
-%     if ~isempty(labels)
-%         labels(:,2) = labels(:,2)+1;
-%     end
+    if ~isempty(labels)
+        labels(:,2) = labels(:,2)+1;
+    end
     boxObj = obj_bboxes_cell{i};
     boxSub = sub_bboxes_cell{i};
     if ~isempty(boxObj)

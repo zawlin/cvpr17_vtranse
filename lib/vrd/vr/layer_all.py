@@ -180,7 +180,7 @@ class RelationDatalayer(caffe.Layer):
                                  squeeze_me=True)
         self.vgg_data = h5py.File("output/sg_vrd_2016_train.hdf5", 'r', 'core')
         self.meta = h5py.File('data/sg_vrd_meta.h5', 'r', 'core')
-        layer_params = yaml.load(self.param_str_)
+        layer_params = yaml.load(self.param_str)
 
         self._batch_size = layer_params['batch_size']
         self.train_data = []
