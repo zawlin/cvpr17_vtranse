@@ -1,5 +1,6 @@
 This implements "Visual Translation Embedding Network for Visual Relation Detection,Hanwang Zhang, Zawlin Kyaw, Shih-Fu Chang, Tat-Seng Chua (CVPR2017)"
 
+Recently there is also a tensorflow adaption provided by yangxuntu, you can find the code here(https://github.com/yangxuntu/vtranse)
 #### What's inside?
 * object detectors training and data preprocessor for vrd and vg.
 * vg canonicalization
